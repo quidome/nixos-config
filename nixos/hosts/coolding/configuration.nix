@@ -13,7 +13,7 @@
     ../../common
   ];
 
-  desktop = "gnome";
+  desktop = "kde";
   my_network = "nm";
 
   # Use the systemd-boot EFI boot loader.
