@@ -5,8 +5,15 @@
 { config, pkgs, ... }:
 
 let
+  # networking configuration
   ip_mgt = "172.16.10.65";
   ip_lan = "172.16.40.65";
+
+  # kubernetes configuration
+  kubeMasterIP = ip_lan;
+  kubeMasterHostname = "api.kube";
+  kubeMasterAPIServerPort = 443;
+
 in {
   imports =
     [ # Include the results of the hardware scan.
@@ -51,6 +58,32 @@ in {
     listenAddress = ip_mgt;
   };
 
+  ### kubernetes setup
+  # resolve master hostname
+  networking.extraHosts = "${kubeMasterIP} ${kubeMasterHostname}";
+
+  # packages for administration tasks
+  environment.systemPackages = with pkgs; [
+    kompose
+    kubectl
+    kubernetes
+  ];
+
+  services.kubernetes = {
+    roles = ["master" "node"];
+    masterAddress = kubeMasterHostname;
+    easyCerts = true;
+    apiserver = {
+      securePort = kubeMasterAPIServerPort;
+      advertiseAddress = kubeMasterIP;
+    };
+
+    # use coredns
+    addons.dns.enable = true;
+
+    # needed if you use swap
+    kubelet.extraOpts = "--fail-swap-on=false";
+  };
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
