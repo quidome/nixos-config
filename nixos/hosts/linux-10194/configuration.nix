@@ -13,8 +13,8 @@
     ../../common
   ];
 
-  desktop = "i3";
-  my_network = "wpa";
+  desktop = "kde";
+  my_network = "nm";
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;

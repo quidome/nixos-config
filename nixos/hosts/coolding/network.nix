@@ -2,9 +2,6 @@
   config = lib.mkMerge [{
     # disable generic dhcp
     networking.useDHCP = false;
-
-    # disable ipv6
-    networking.enableIPv6 = false;
   }
   ( lib.mkIf (config.my_network == "nm") {
     # configuration for using networkmanager

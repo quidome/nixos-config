@@ -11,6 +11,7 @@ with lib;
       # multimedia
       feh
       peek
+      mpv
 
       # get fido token working
       libu2f-host
