@@ -16,9 +16,6 @@
       vim
       htop
       lsof
-      git
-      git-crypt
-      gitAndTools.tig
 
       # network
       openconnect
@@ -38,6 +35,9 @@
       ripgrep
 
       # dev tools
+      git
+      git-crypt
+      gitAndTools.tig
       gnumake
       shellcheck
       go
