@@ -5,16 +5,7 @@ with lib;
   environment.systemPackages =
     if config.services.xserver.enable then with pkgs; [
       # web
-      chromium
       firefox
-
-      # multimedia
-      feh
-      peek
-      mpv
-
-      # get fido token working
-      libu2f-host
     ]
     else
     [ ];

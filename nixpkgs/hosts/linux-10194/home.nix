@@ -36,12 +36,15 @@ in {
     signal-desktop
     rambox
     teams
+    chromium
 
     # media
     gimp
     zathura
-    #drawio
+    drawio
     spotify
+    mpv
+    peek
 
     # cloud
     k9s

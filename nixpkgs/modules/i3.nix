@@ -4,6 +4,7 @@
 
   home.packages = with pkgs; [
     ranger
+    feh
   ];
 
   xdg.mimeApps = {
