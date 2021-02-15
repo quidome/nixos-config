@@ -9,7 +9,7 @@ in {
     ../../modules/basics.nix
     ../../modules/vim
     ../../modules/gui.nix
-    #../../modules/i3.nix
+    ../../modules/i3.nix
     #./gnome.nix
     ./secret.nix
   ];
