@@ -2,9 +2,23 @@
 
 {
 
+  # extra packages to support my i3 setup
   home.packages = with pkgs; [
+    # audio/screen controls
+    arandr
+    brightnessctl
+    pamixer
+    pavucontrol
+    playerctl
+
+    # cli tools
     ranger
     feh
+
+    # theming
+    lxappearance
+    arc-theme
+    arc-icon-theme
   ];
 
   xdg.mimeApps = {

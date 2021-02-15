@@ -39,28 +39,9 @@ with lib;
             i3lock
             termite
             xss-lock
-            pavucontrol
-            pamixer
-            playerctl # control media
-            brightnessctl # control screen backlight
-            arandr
-            flameshot
-
-            # gtk themes
-            arc-theme
-            arc-icon-theme
           ];
         };
       };
-    };
-
-    environment.etc."xdg/gtk-3.0/settings.ini" = {
-      text = ''
-        [Settings]
-        gtk-icon-theme-name=Arc
-        gtk-theme-name=Arc-dark
-        gtk-application-prefer-dark-theme = true
-      '';
     };
 
     fonts.fonts = with pkgs; [ font-awesome ];
