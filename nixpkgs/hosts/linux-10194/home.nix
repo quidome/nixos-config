@@ -8,6 +8,7 @@ in {
   imports = [
     ../../modules/basics.nix
     ../../modules/vim
+    ../../modules/gui.nix
     #../../modules/i3.nix
     #./gnome.nix
     ./secret.nix
