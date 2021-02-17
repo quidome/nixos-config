@@ -13,8 +13,8 @@
     ../../common
   ];
 
-  desktop = "kde";
-  my_network = "nm";
+  desktop = "i3";
+  my_network = "wpa";
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -54,8 +54,6 @@
       ];
     };
   };
-
-  users.defaultUserShell = pkgs.zsh;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

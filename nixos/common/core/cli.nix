@@ -2,7 +2,7 @@
 
 {
   # set default shell for all users
-  users.defaultUserShell = pkgs.zsh;
+  # users.defaultUserShell = pkgs.zsh;
 
   # Basic command line setup
   environment = {

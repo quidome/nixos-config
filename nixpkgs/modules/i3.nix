@@ -1,7 +1,6 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
-
   # extra packages to support my i3 setup
   home.packages = with pkgs; [
     # audio/screen controls
