@@ -24,6 +24,7 @@ in {
     rcm
 
     # dev
+    linuxPackages.bpftrace
     exercism
     meld
     vscode
