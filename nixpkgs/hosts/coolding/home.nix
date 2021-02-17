@@ -8,8 +8,9 @@ in {
   imports = [
     ../../modules/basics.nix
     ../../modules/vim
+    ../../modules/gui.nix
     ../../modules/i3.nix
-    ./gnome.nix
+    #./gnome.nix
     ./secret.nix
   ];
 
@@ -23,24 +24,39 @@ in {
     rcm
 
     # dev
+    linuxPackages.bpftrace
     exercism
     meld
     vscode
     emacs
-    nanum-gothic-coding
+    nanum-gothic-coding # spacemacs fallback font
 
     # net
     element-desktop
     tdesktop
     signal-desktop
+    chromium
 
     # media
     gimp
     zathura
     spotify
+    mpv
+    peek
+
+    # cloud
+    k9s
+    kubectx
+    stern
   ];
 
   programs = {
+    git = {
+      enable = true;
+      userName = "quidome";
+      userEmail = "quidome@gmail.com";
+    };
+
     rofi.enable = true;
     rofi.theme = "Pop-Dark.rasi";
 
