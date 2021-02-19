@@ -1,6 +1,34 @@
 { config, pkgs, ... }:
 
 {
+  # packages to install
+  home.packages = with pkgs; [
+    # dev
+    emacs
+    linuxPackages.bpftrace
+    meld
+    nanum-gothic-coding # spacemacs fallback font
+    vscode
+
+    # net
+    chromium
+    element-desktop
+    signal-desktop
+    tdesktop
+
+    # media
+    gimp
+    mpv
+    peek
+    spotify
+    zathura
+
+    # cloud
+    k9s
+    kubectx
+    stern
+  ];
+
   # setup programs
   programs.termite = {
       enable = true;
@@ -39,6 +67,11 @@
         color7  = #fcfcfa
         color15 = #fcfcfa
       '';
+  };
+
+  programs.rofi = {
+    enable = true;
+    theme = "Pop-Dark.rasi";
   };
 
   # setup services

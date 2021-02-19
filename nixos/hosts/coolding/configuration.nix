@@ -37,22 +37,6 @@
   services = {
     printing.enable = true;
     logind.extraConfig = "HandlePowerKey=suspend";
-
-    grafana.enable = true;
-    prometheus = {
-      enable = true;
-      exporters.node.enable = true;
-
-      scrapeConfigs = [
-        {
-          job_name = "coolding";
-          scrape_interval = "30s";
-          static_configs = [{
-            targets = [ "127.0.0.1:${toString config.services.prometheus.exporters.node.port}" ];
-          }];
-        }
-      ];
-    };
   };
 
   # This value determines the NixOS release from which the default

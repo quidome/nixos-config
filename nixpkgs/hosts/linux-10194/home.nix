@@ -20,44 +20,15 @@ in {
 
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
-    # base
-    rcm
-
     # dev
-    linuxPackages.bpftrace
     exercism
-    meld
-    vscode
-    emacs
-    nanum-gothic-coding # spacemacs fallback font
     jetbrains.idea-ultimate
 
     # net
-    element-desktop
-    tdesktop
-    signal-desktop
     rambox
     teams
-    chromium
 
     # media
-    gimp
-    zathura
     drawio
-    spotify
-    mpv
-    peek
-
-    # cloud
-    k9s
-    kubectx
-    stern
   ];
-
-  programs = {
-    rofi.enable = true;
-    rofi.theme = "Pop-Dark.rasi";
-
-    ssh.enable = true;
-  };
 }

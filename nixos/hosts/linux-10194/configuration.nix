@@ -45,11 +45,6 @@
     lftp
     openssl
 
-    # cloud stuff
-    k9s
-    kubectx
-    stern
-
     # dev tools
     gitAndTools.gitflow
     ruby_2_5
@@ -80,28 +75,6 @@
   services = {
     printing.enable = true;
     logind.extraConfig = "HandlePowerKey=suspend";
-
-  #   grafana = {
-  #     enable = true;
-  #   };
-
-  #   prometheus = {
-  #     enable = true;
-  #     exporters.node = {
-  #       enable = true;
-  #       enabledCollectors = [ "systemd" ];
-  #     };
-
-  #     scrapeConfigs = [
-  #     {
-  #       job_name = "linux-10194";
-  #       scrape_interval = "30s";
-  #       static_configs = [{
-  #         targets = [ "127.0.0.1:${toString config.services.prometheus.exporters.node.port}" ];
-  #       }];
-  #     }
-  #   ];
-  #   };
   };
 
 
