@@ -10,7 +10,6 @@ in {
     ../../modules/vim
     ../../modules/gui.nix
     ../../modules/i3.nix
-    #./gnome.nix
     ./secret.nix
   ];
 
@@ -21,14 +20,37 @@ in {
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
     # dev
-    exercism
+    gitAndTools.gitflow
     jetbrains.idea-ultimate
+    ruby_2_5
+    vagrant
 
     # net
+    filezilla
+    freerdp
+    krb5
+    lftp
+    openconnect
+    openssl
+    perl532Packages.AppClusterSSH
     rambox
     teams
+    tmux-cssh
 
     # media
     drawio
+
+    # python setup
+    black
+    (python38.withPackages (ps:
+      with ps; [
+        flake8
+        pip
+        requests
+        ruamel_yaml
+        termcolor
+        virtualenvwrapper
+        yamllint
+      ]))
   ];
 }

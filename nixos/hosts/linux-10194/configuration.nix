@@ -22,7 +22,6 @@
 
   boot.kernel.sysctl = {
     "vm.swappiness" = 1;
-    # "net.ipv6.conf.wlp2s0.disable_ipv6" = true;
   };
 
   boot.initrd.luks.devices = {
@@ -33,37 +32,6 @@
   };
 
   networking.hostName = "linux-10194"; # Define your hostname.
-
-  environment.systemPackages = with pkgs; [
-    # network
-    freerdp
-    krb5
-    openconnect
-    perl532Packages.AppClusterSSH
-    tmux-cssh
-    filezilla
-    lftp
-    openssl
-
-    # dev tools
-    gitAndTools.gitflow
-    ruby_2_5
-    vagrant
-
-    # python setup
-    black
-    (python38.withPackages (ps:
-      with ps; [
-        flake8
-        pip
-        requests
-        ruamel_yaml
-        termcolor
-        virtualenvwrapper
-        yamllint
-      ]))
-
-  ];
 
   # use gnupg agent for ssh
   programs = {

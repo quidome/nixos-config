@@ -5,6 +5,7 @@
   home.packages = with pkgs; [
     # dev
     emacs
+    exercism
     linuxPackages.bpftrace
     meld
     nanum-gothic-coding # spacemacs fallback font
