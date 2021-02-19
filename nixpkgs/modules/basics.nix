@@ -4,7 +4,7 @@
 
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
-    # basics
+    # base
     tmux
     ldns
     jq

@@ -33,6 +33,11 @@
 
   networking.hostName = "linux-10194"; # Define your hostname.
 
+  environment.systemPackages = with pkgs; [
+    # essential packages for this machine
+    openconnect
+  ];
+
   # use gnupg agent for ssh
   programs = {
     gnupg.agent.enableSSHSupport = true;
