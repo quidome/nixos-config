@@ -28,6 +28,7 @@
 
   networking.hostName = "coolding"; # Define your hostname.
 
+  # use gnupg agent for ssh
   programs = {
     gnupg.agent.enableSSHSupport = true;
     ssh.startAgent = false;

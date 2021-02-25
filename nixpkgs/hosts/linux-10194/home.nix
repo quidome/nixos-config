@@ -39,6 +39,7 @@ in {
 
     # media
     drawio
+    kdenlive
 
     # python setup
     black

@@ -3,6 +3,9 @@
 {
   # packages to install
   home.packages = with pkgs; [
+    # base
+    xclip
+
     # dev
     emacs
     exercism
