@@ -7,6 +7,9 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_IE.UTF-8";
 
+  # disable obsolete configuration method
+  networking.useDHCP = false;
+
   programs = {
     gnupg.agent.enable = true;
     zsh.enable = true;
