@@ -22,5 +22,6 @@ in {
   home.packages = with pkgs; [
     # dev
     exercism
+    kdenlive
   ];
 }
