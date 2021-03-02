@@ -15,5 +15,11 @@ with lib;
       default = "none";
       description = "Sets a network setup; set to: none, nm or wpa.";
     };
+
+    use_wpa = mkOption {
+      type = types.bool;
+      default = true;
+      description = "Whether to use wpa_supplicant instead of network manager. Defaults to true";
+    };
   };
 }
