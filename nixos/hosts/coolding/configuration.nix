@@ -14,7 +14,7 @@
   ];
 
   desktop = "i3";
-  my_network = "wpa";
+  use_wpa = true;
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;

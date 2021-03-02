@@ -10,12 +10,6 @@ with lib;
       description = "Sets the desktop environment; set to: none or i3.";
     };
 
-    my_network = mkOption {
-      type = types.str;
-      default = "none";
-      description = "Sets a network setup; set to: none, nm or wpa.";
-    };
-
     use_wpa = mkOption {
       type = types.bool;
       default = true;
