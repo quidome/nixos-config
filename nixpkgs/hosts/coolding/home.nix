@@ -10,9 +10,12 @@ in {
     ../../modules/vim
     ../../modules/gui.nix
     ../../modules/i3.nix
-    #./gnome.nix
+    ../../program
     ./secret.nix
   ];
+
+  # feature toggles
+  elemental.home.program.terminal.tmux.enable = true; 
 
   home.username = user;
   home.homeDirectory = userHome;
@@ -22,6 +25,8 @@ in {
   home.packages = with pkgs; [
     # dev
     exercism
+
+    # media
     kdenlive
   ];
 }

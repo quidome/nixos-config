@@ -28,6 +28,7 @@ in {
     jetbrains.idea-ultimate
     ruby_2_5
     vagrant
+    exercism
 
     # net
     filezilla
