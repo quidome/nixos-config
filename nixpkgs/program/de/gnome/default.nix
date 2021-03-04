@@ -2,8 +2,6 @@
 with lib;
 let
   cfg = config.elemental.home.program.de.gnome;
-  user = config.home.username;
-  userHome = config.home.homeDirectory;
 in
 {
   options.elemental.home.program.de.gnome = {
@@ -37,8 +35,8 @@ in
       "org/gnome/shell/app-switcher" = {
         current-workspace-only = true;
       };
-      "org/home/${user}/bin/browser/gnome/desktop/background" = {
-        picture-uri = "file:///${userHome}/Pictures/wallpapers/starry-night.jpg";
+      "org/home/${config.home.username}/bin/browser/gnome/desktop/background" = {
+        picture-uri = "file:///${config.home.homeDirectory}/Pictures/wallpapers/1872.jpg";
       };
       "org/gnome/desktop/calendar" = {
         show-weekdate = true;
@@ -65,12 +63,12 @@ in
       };
       "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
         binding = "<Shift><Super>b";
-        command = "${userHome}/bin/browser";
+        command = "${config.home.homeDirectory}/bin/browser";
         name = "launch browserchooser";
       };
       "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" = {
         binding="<Shift><Super>p";
-        command="/home/${user}/bin/rofipass";
+        command="/home/${config.home.username}/bin/rofipass";
         name="launch rofipass";
       };
       "org/gnome/shell/extensions/dash-to-dock" = {
@@ -88,7 +86,7 @@ in
         enable-notification = true;
         filename-template = "{Y}{m}{d}{H}{M}{S}-{w}x{h}";
         imgur-enable-notification = true;
-        save-location = "${userHome}/Pictures/screenshots";
+        save-location = "${config.home.homeDirectory}/Pictures/screenshots";
         save-screenshot = true;
         shortcut-select-area = ["Print"];
       };
