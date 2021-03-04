@@ -1,5 +1,6 @@
 {
   imports = [
-    ./terminal/tmux/default.nix
+    ./de/gnome
+    ./terminal/tmux
   ];
 }

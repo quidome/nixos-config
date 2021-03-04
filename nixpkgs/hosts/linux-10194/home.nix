@@ -15,7 +15,9 @@ in {
   ];
 
   # feature toggles
-  elemental.home.program.terminal.tmux.enable = true; 
+  elemental.home.program.terminal.tmux.enable = true;
+  elemental.home.program.de.gnome.enable = true;
+
 
   home.username = user;
   home.homeDirectory = userHome;
