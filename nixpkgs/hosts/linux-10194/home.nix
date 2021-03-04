@@ -9,7 +9,6 @@ in {
     ../../modules/basics.nix
     ../../modules/vim
     ../../modules/gui.nix
-    ../../modules/i3.nix
     ../../program
     ./secret.nix
   ];
@@ -17,6 +16,7 @@ in {
   # feature toggles
   elemental.home.program.terminal.tmux.enable = true;
   elemental.home.program.de.gnome.enable = true;
+  elemental.home.program.wm.i3.enable = false;
 
 
   home.username = user;
