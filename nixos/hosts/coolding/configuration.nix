@@ -11,10 +11,11 @@
     ./network.nix
     ./secret.nix
     ../../common
+    ../../services
   ];
 
-  desktop = "i3";
-  use_wpa = true;
+  desktop = "gnome";
+  use_wpa = false;
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
