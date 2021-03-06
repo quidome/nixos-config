@@ -6,22 +6,29 @@ let
   hostname = "linux-10194";
 in {
   imports = [
+    ../../elemental.nix
     ../../modules/basics.nix
     ../../modules/vim
     ../../modules/gui.nix
     ../../program
+    ../../user
     ./secret.nix
   ];
 
-  # feature toggles
-  elemental.home.program.terminal.tmux.enable = true;
-  elemental.home.program.de.gnome.enable = true;
-  elemental.home.program.wm.i3.enable = false;
-
-
+  # home manager required settings
   home.username = user;
   home.homeDirectory = userHome;
   home.stateVersion = "20.09";
+
+  # elemental setup
+  elemental.user = user;
+  elemental.host = hostname;
+  elemental.role = "workstation";
+
+  # feature toggles
+  elemental.program.terminal.tmux.enable = true;
+  #elemental.program.de.gnome.enable = true;
+  elemental.program.wm.i3.enable = true;
 
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
