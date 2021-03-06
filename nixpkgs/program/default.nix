@@ -1,7 +1,8 @@
 {
   imports = [
     ./de/gnome
-    ./wm/i3
+    ./dev/git
     ./terminal/tmux
+    ./wm/i3
   ];
 }
