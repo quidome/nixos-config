@@ -54,6 +54,8 @@ in {
     # media
     drawio
     kdenlive
+    obs-studio
+    obs-v4l2sink
 
     # python setup
     black
