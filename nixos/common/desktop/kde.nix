@@ -7,9 +7,6 @@ with lib;
 
     # hardware required for plasma
     hardware = {
-      pulseaudio.enable = true;
-      pulseaudio.package = pkgs.pulseaudioFull;
-
       bluetooth.enable = true;
       bluetooth.powerOnBoot = true;
     };
