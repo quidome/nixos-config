@@ -28,6 +28,7 @@ in
       arc-icon-theme
     ];
 
+    xdg.configFile."mimeapps.list".force = true;
     xdg.mimeApps = {
       enable = true;
       defaultApplications = {
@@ -40,6 +41,8 @@ in
         "x-scheme-handler/element" = "Electron.desktop";
         "x-scheme-handler/sgnl" = "signal-desktop.desktop";
         "application/pdf" = "org.pwmt.zathura.desktop";
+        "image/jpeg" = "feh.desktop";
+        "image/png" = "feh.desktop";
       };
     };
   };
