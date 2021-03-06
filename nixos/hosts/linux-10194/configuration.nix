@@ -2,12 +2,15 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
-
-{
+{ config, pkgs, lib, ... }:
+let unstable = import <unstable> {};
+in {
   imports =
     [ # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    # import the unstable nix expression for the pipewire services
+    <unstable/nixos/modules/services/desktops/pipewire/pipewire.nix>
+    <unstable/nixos/modules/services/desktops/pipewire/pipewire-media-session.nix>
     ./network.nix
     ./secret.nix
     ../../common
@@ -31,14 +34,14 @@
     };
   };
 
-      boot.extraModulePackages = [
-      config.boot.kernelPackages.v4l2loopback
-    ];
+  boot.extraModulePackages = [
+    config.boot.kernelPackages.v4l2loopback
+  ];
 
-    # Register a v4l2loopback device at boot
-    boot.kernelModules = [
-      "v4l2loopback"
-    ];
+  # Register a v4l2loopback device at boot
+  boot.kernelModules = [
+    "v4l2loopback"
+  ];
 
   networking.hostName = "linux-10194"; # Define your hostname.
 
@@ -59,6 +62,30 @@
     logind.extraConfig = "HandlePowerKey=suspend";
   };
 
+  # setup pipewire for audio
+  # make sure the 'unstable' nix expressions are in our path (*might* not be necessary)
+  #nix.nixPath = lib.mkDefault (lib.mkBefore [ "unstable=/nix/var/nix/profiles/per-user/root/channels/nixos-unstable" ]);
+  # disable the default (20.09) nix expression for the pipewire service
+  disabledModules = [ "services/desktops/pipewire.nix" ];
+
+  sound.enable = true;
+  nixpkgs.config.pulseaudio = true;
+  security.rtkit.enable = true;
+  hardware.pulseaudio.enable = false;
+  services.pipewire = {
+    enable = true;
+    package = unstable.pipewire;
+    alsa = {
+      enable = true;
+      support32Bit = true;
+    };
+    pulse.enable = true;
+    jack.enable = true;
+  };
+
+  services.pipewire.media-session = {
+    package = unstable.pipewire.mediaSession;
+  };
 
   virtualisation.virtualbox.host.enable = true;
   virtualisation.docker.enable = true;

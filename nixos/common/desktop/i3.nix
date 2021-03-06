@@ -12,7 +12,7 @@ with lib;
   config = mkIf (config.desktop == "i3") {
     # i3 related hardware configuration
     hardware = {
-      pulseaudio.enable = true;
+      #pulseaudio.enable = true;
 
       bluetooth.enable = true;
       bluetooth.powerOnBoot = true;
