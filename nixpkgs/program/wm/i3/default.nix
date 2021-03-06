@@ -1,10 +1,10 @@
 { lib, pkgs, config, ... }:
 with lib;
 let
-  cfg = config.elemental.home.program.wm.i3;
+  cfg = config.elemental.program.wm.i3;
 in
 {
-  options.elemental.home.program.wm.i3 = {
+  options.elemental.program.wm.i3 = {
     enable = mkEnableOption "Enable gnome configuration";
   };
 

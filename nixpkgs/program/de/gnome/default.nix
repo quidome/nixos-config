@@ -1,10 +1,10 @@
 { lib, pkgs, config, ... }:
 with lib;
 let
-  cfg = config.elemental.home.program.de.gnome;
+  cfg = config.elemental.program.de.gnome;
 in
 {
-  options.elemental.home.program.de.gnome = {
+  options.elemental.program.de.gnome = {
     enable = mkEnableOption "Enable gnome configuration";
   };
 
