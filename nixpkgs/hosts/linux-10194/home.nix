@@ -6,13 +6,13 @@ let
   hostname = "linux-10194";
 in {
   imports = [
+    ./secret.nix
     ../../elemental.nix
     ../../modules/basics.nix
     ../../modules/vim
     ../../modules/gui.nix
     ../../program
     ../../user
-    ./secret.nix
   ];
 
   # home manager required settings
@@ -22,8 +22,8 @@ in {
 
   # elemental setup
   elemental.user = user;
-  elemental.host = hostname;
   elemental.role = "workstation";
+  elemental.host = hostname;
 
   # feature toggles
   elemental.program.terminal.tmux.enable = true;

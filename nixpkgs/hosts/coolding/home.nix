@@ -6,14 +6,13 @@ let
   hostname = "coolding";
 in {
   imports = [
+    ./secret.nix
+    ../../elemental.nix
     ../../modules/basics.nix
     ../../modules/vim
     ../../modules/gui.nix
-    ../../modules/i3.nix
     ../../program
-    ../../role
-    ../../role/de/gnome
-    ./secret.nix
+    ../../user
   ];
 
   home.username = user;
@@ -23,11 +22,12 @@ in {
   # elemental setup
   elemental.user = user;
   elemental.role = "workstation";
-  elemental.machine = hostname;
+  elemental.host = hostname;
 
   # feature toggles
   elemental.program.terminal.tmux.enable = true;
-  elemental.role.de.gnome.enable = true;
+  elemental.program.de.gnome.enable = true;
+  #elemental.program.wm.i3.enable = true;
 
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
