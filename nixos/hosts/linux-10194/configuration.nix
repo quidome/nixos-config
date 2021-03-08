@@ -35,16 +35,16 @@
     };
   };
 
-  boot.extraModulePackages = [
-    config.boot.kernelPackages.v4l2loopback
-  ];
+  # boot.extraModulePackages = [
+  #   config.boot.kernelPackages.v4l2loopback
+  # ];
 
-  # Register a v4l2loopback device at boot
-  boot.kernelModules = [
-    "v4l2loopback"
-  ];
+  # # Register a v4l2loopback device at boot
+  # boot.kernelModules = [
+  #   "v4l2loopback"
+  # ];
 
-  networking.hostName = "linux-10194"; # Define your hostname.
+
 
   environment.systemPackages = with pkgs; [
     # essential packages for this machine
