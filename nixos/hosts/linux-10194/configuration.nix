@@ -12,12 +12,12 @@
     ./secret.nix
     ../../common
     ../../services
-    ../../services/audio/pipewire
+    #../../services/audio/pipewire
   ];
 
   desktop = "i3";
   use_wpa = true;
-  use_pipewire = true;
+  use_pipewire = false;
 
   networking.hostName = "linux-10194"; # Define your hostname.
 
