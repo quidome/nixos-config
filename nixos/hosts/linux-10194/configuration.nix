@@ -36,17 +36,6 @@
     };
   };
 
-  # boot.extraModulePackages = [
-  #   config.boot.kernelPackages.v4l2loopback
-  # ];
-
-  # # Register a v4l2loopback device at boot
-  # boot.kernelModules = [
-  #   "v4l2loopback"
-  # ];
-
-
-
   environment.systemPackages = with pkgs; [
     # essential packages for this machine
     openconnect
