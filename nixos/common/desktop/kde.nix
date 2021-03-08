@@ -32,6 +32,7 @@ with lib;
     environment = {
       # add some desktop applications
       systemPackages = with pkgs; [
+        plasma-pa     # needed for managing audio
         # kde apps
         okular
         yakuake
