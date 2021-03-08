@@ -3,8 +3,7 @@ with lib;
 let
   unstable = import <unstable> {};
 in {
-
-    imports = [ 
+    imports = [
       # import the unstable nix expression for the pipewire services
       <unstable/nixos/modules/services/desktops/pipewire/pipewire.nix>
       <unstable/nixos/modules/services/desktops/pipewire/pipewire-media-session.nix>
@@ -14,7 +13,6 @@ in {
     # disable the default (20.09) nix expression for the pipewire service
     disabledModules = [ "services/desktops/pipewire.nix" ];
 
-  config = mkIf config.use_pipewire {
     sound.enable = true;
     nixpkgs.config.pulseaudio = true;
     security.rtkit.enable = true;
@@ -33,5 +31,4 @@ in {
     services.pipewire.media-session = {
       package = unstable.pipewire.mediaSession;
     };
-  };
 }
