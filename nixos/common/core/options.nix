@@ -15,5 +15,7 @@ with lib;
       default = true;
       description = "Whether to use wpa_supplicant instead of network manager. Defaults to true";
     };
+
+    use_pipewire = mkEnableOption "Enable pipewire audio. Defaults to false (use pulseaudio)";
   };
 }

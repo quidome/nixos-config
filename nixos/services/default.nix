@@ -1,5 +1,6 @@
 {
   imports = [
-    ./pipewire
+    ./audio/pipewire
+    ./audio/pulseaudio
   ];
 }
