@@ -16,6 +16,9 @@
 
   desktop = "gnome";
   use_wpa = false;
+  use_pipewire = true;
+
+  networking.hostName = "coolding"; # Define your hostname.
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -27,7 +30,6 @@
     options hid_apple swap_fn_leftctrl=1
   '';
 
-  networking.hostName = "coolding"; # Define your hostname.
 
   # use gnupg agent for ssh
   programs = {
