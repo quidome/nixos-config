@@ -41,6 +41,7 @@
   services = {
     printing.enable = true;
     logind.extraConfig = "HandlePowerKey=suspend";
+    flatpak.enable = true;
   };
 
   # This value determines the NixOS release from which the default
