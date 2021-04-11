@@ -15,14 +15,10 @@ with lib;
     services = {
       avahi.enable = true;
       accounts-daemon.enable = true;
-      printing.enable = true;
 
-      xserver.displayManager = {
-        sddm.enable = true;
-        #sddm.theme = "breeze";
-        defaultSession = "plasma5";
-      };
-
+      # actual kde stuff
+      xserver.displayManager.sddm.enable = true;
+      xserver.displayManager.defaultSession = "plasma5";
       xserver.desktopManager.plasma5.enable = true;
     };
 
