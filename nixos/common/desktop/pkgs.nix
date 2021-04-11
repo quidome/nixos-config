@@ -1,20 +1,46 @@
 { config, pkgs, lib, ... }:
 
-with lib;
 {
-  environment.systemPackages =
-    if config.services.xserver.enable then with pkgs; [
-      # web
-      firefox
-    ]
-    else
-    [ ];
+  config = lib.mkIf (config.services.xserver.enable) {
+    environment.systemPackages = with pkgs; [
+      # base
+      xclip
 
-  programs.firejail = {
-    enable = false;
-    wrappedBinaries = {
-      firefox = "${lib.getBin pkgs.firefox}/bin/firefox";
-      mpv = "${lib.getBin pkgs.mpv}/bin/mpv";
+      # dev
+      emacs
+      exercism
+      linuxPackages.bpftrace
+      meld
+      nanum-gothic-coding # spacemacs fallback font
+      vscode
+
+      # net
+      firefox
+      chromium
+      element-desktop
+      signal-desktop
+      tdesktop
+
+      # media
+      gimp
+      mpv
+      peek
+      spotify
+      zathura
+      kdenlive
+
+      # cloud
+      k9s
+      kubectx
+      stern
+    ];
+
+    programs.firejail = {
+      enable = true;
+      wrappedBinaries = {
+        #firefox = "${lib.getBin pkgs.firefox}/bin/firefox";
+        mpv = "${lib.getBin pkgs.mpv}/bin/mpv";
+      };
     };
   };
 }

@@ -12,21 +12,29 @@
       wget
       curl
       httpie
+      ldns
 
       # handy tools
       bat
       docker-compose
       exa
       fzf
+      gopass
       ipcalc
+      jq
       nixfmt
+      procs # ps
+      rcm           # dotfile manager
       ripgrep
-
+      yq
+      ytop # system monitor
+    
       # dev tools
+      gnumake
+      gcc
       git
       git-crypt
       gitAndTools.tig
-      gnumake
       shellcheck
       go
       dep

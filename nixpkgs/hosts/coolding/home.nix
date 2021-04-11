@@ -30,11 +30,4 @@ in {
   #elemental.program.wm.i3.enable = true;
 
   nixpkgs.config.allowUnfree = true;
-  home.packages = with pkgs; [
-    # dev
-    exercism
-
-    # media
-    kdenlive
-  ];
 }

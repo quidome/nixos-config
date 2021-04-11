@@ -2,36 +2,9 @@
 
 {
   # packages to install
-  home.packages = with pkgs; [
-    # base
-    xclip
+  # home.packages = with pkgs; [
 
-    # dev
-    emacs
-    exercism
-    linuxPackages.bpftrace
-    meld
-    nanum-gothic-coding # spacemacs fallback font
-    vscode
-
-    # net
-    chromium
-    element-desktop
-    signal-desktop
-    tdesktop
-
-    # media
-    gimp
-    mpv
-    peek
-    spotify
-    zathura
-
-    # cloud
-    k9s
-    kubectx
-    stern
-  ];
+  # ];
 
   # setup programs
   programs.termite = {
