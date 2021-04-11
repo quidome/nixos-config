@@ -17,5 +17,6 @@ with lib;
     };
 
     use_pipewire = mkEnableOption "Enable pipewire audio. Defaults to false (use pulseaudio)";
+    use_flatpak = mkEnableOption "Enable flatpak";
   };
 }

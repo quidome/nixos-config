@@ -15,9 +15,10 @@
     #../../services/audio/pipewire
   ];
 
-  desktop = "i3";
-  use_wpa = true;
+  desktop = "gnome";
+  use_wpa = false;
   use_pipewire = false;
+  use_flatpak = true;
 
   networking.hostName = "linux-10194"; # Define your hostname.
 
