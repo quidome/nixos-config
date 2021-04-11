@@ -11,12 +11,12 @@
     ./network.nix
     ./secret.nix
     ../../common
-    ../../services
+    #../../services
   ];
 
   desktop = "gnome";
   use_wpa = false;
-  use_pipewire = true;
+  use_pipewire = false;
 
   networking.hostName = "coolding"; # Define your hostname.
 
@@ -43,6 +43,8 @@
     logind.extraConfig = "HandlePowerKey=suspend";
     flatpak.enable = true;
   };
+
+  virtualisation.docker.enable = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
