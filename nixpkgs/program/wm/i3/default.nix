@@ -5,25 +5,13 @@ let
 in
 {
   options.elemental.program.wm.i3 = {
-    enable = mkEnableOption "Enable gnome configuration";
+    enable = mkEnableOption "Enable i3 configuration";
   };
 
   config = mkIf cfg.enable {
     # extra packages to support my i3 setup
     home.packages = with pkgs; [
-      # audio/screen controls
-      arandr
-      brightnessctl
-      pamixer
-      pavucontrol
-      playerctl
-
-      # cli tools
-      ranger
-      feh
-
       # theming
-      lxappearance
       arc-theme
       arc-icon-theme
     ];
