@@ -25,7 +25,7 @@ in
       enable = true;
       userEmail = cfg.userEmail;
       userName = cfg.userName;
-      delta.enable = true;
+      #delta.enable = true;
       extraConfig = {
         core.excludesfile = "${config.home.homeDirectory}/.gitignore_global";
         # Force SSH
