@@ -9,12 +9,10 @@
       # dev
       emacs
       nanum-gothic-coding # spacemacs fallback font
-      exercism
-      linuxPackages.bpftrace
       meld
       vscode
 
-      # net
+      # net2
       firefox
       chromium
       element-desktop
@@ -29,11 +27,6 @@
       zathura
       kdenlive
       pavucontrol
-
-      # cloud
-      k9s
-      kubectx
-      stern
     ];
 
     programs.firejail = {

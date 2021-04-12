@@ -14,6 +14,11 @@
       httpie
       ldns
 
+      # cloud
+      k9s
+      kubectx
+      stern
+
       # handy tools
       bat
       docker-compose
@@ -39,5 +44,7 @@
       shellcheck
       go
       dep
+      exercism
+      linuxPackages.bpftrace
     ];
 }
