@@ -18,7 +18,11 @@ with lib;
       bluetooth.powerOnBoot = true;
     };
 
-    programs.gnupg.agent.pinentryFlavor = "gtk2";
+    programs = {
+      gnupg.agent.pinentryFlavor = "gtk2";
+
+      dconf.enable = true;
+    };
 
     # enable xserver but use startx instead of a DM
     services = {
