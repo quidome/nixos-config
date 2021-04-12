@@ -38,11 +38,26 @@ with lib;
           enable = true;
           # package = unstable.pkgs.i3;
           extraPackages = with pkgs; [
+            # i3 supporting apps
             dmenu
             i3status-rust
             i3lock
             termite
             xss-lock
+            dunst
+
+            # audio/screen controls
+            arandr
+            brightnessctl
+            pamixer
+            playerctl
+
+            # cli tools
+            ranger
+            feh
+
+            # theming
+            lxappearance
           ];
         };
       };
