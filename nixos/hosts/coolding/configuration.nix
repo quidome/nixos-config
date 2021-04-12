@@ -11,12 +11,17 @@
     ./network.nix
     ./secret.nix
     ../../common
-    #../../services
+    ../../services
+    #../../services/audio/pipewire
   ];
 
-  desktop = "gnome";
-  use_wpa = false;
-  use_pipewire = false;
+  custom = {
+    desktop = "gnome";
+    wpa.enable = false;
+
+    flatpak.enable = true;
+    pipewire.enable = false;
+  };
 
   networking.hostName = "coolding"; # Define your hostname.
 
@@ -41,7 +46,6 @@
   services = {
     printing.enable = true;
     logind.extraConfig = "HandlePowerKey=suspend";
-    flatpak.enable = true;
   };
 
   virtualisation.docker.enable = true;
