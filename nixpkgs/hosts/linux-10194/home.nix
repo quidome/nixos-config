@@ -27,45 +27,10 @@ in {
 
   # feature toggles
   elemental.program.terminal.tmux.enable = true;
-  #elemental.program.de.gnome.enable = true;
-  elemental.program.wm.i3.enable = true;
+  elemental.program.de.gnome.enable = true;
+  #elemental.program.wm.i3.enable = false;
 
   nixpkgs.config.allowUnfree = true;
-  home.packages = with pkgs; [
-    # dev
-    gitAndTools.gitflow
-    jetbrains.idea-ultimate
-    ruby_2_5
-    vagrant
-    exercism
-
-    # net
-    filezilla
-    freerdp
-    krb5
-    lftp
-    openconnect
-    openssl
-    perl532Packages.AppClusterSSH
-    rambox
-    teams
-    tmux-cssh
-
-    # media
-    drawio
-    kdenlive
-
-    # python setup
-    black
-    (python38.withPackages (ps:
-      with ps; [
-        flake8
-        pip
-        requests
-        ruamel_yaml
-        termcolor
-        virtualenvwrapper
-        yamllint
-      ]))
-  ];
+  #home.packages = with pkgs; [
+  #];
 }

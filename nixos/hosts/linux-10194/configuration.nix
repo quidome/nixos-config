@@ -37,8 +37,41 @@
     };
   };
 
+  # install packages unique for this host
   environment.systemPackages = with pkgs; [
-    # essential packages for this machine
+    # dev
+    # jetbrains.idea-ultimate    # flatpak version is more up to date
+    ruby_2_5
+    vagrant
+
+    # net
+    filezilla
+    freerdp
+    krb5
+    lftp
+    openconnect
+    openssl
+    perl532Packages.AppClusterSSH
+    rambox
+    #teams    # using flatpak for now
+    tmux-cssh
+    teleconsole
+
+    # media
+    drawio
+
+    # python setup
+    black
+    (python38.withPackages (ps:
+      with ps; [
+        flake8
+        pip
+        requests
+        ruamel_yaml
+        termcolor
+        virtualenvwrapper
+        yamllint
+      ]))
     openconnect
   ];
 
