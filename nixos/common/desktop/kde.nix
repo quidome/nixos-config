@@ -3,7 +3,7 @@
 
 with lib;
 {
-  config = mkIf (config.desktop == "kde") {
+  config = mkIf (config.custom.desktop == "kde") {
 
     # hardware required for plasma
     hardware = {

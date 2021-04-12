@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 with lib;
 {
-  config = mkIf (! config.use_pipewire) {
+  config = mkIf (! config.custom.pipewire.enable) {
     hardware.pulseaudio.enable = true;
     hardware.pulseaudio.package = pkgs.pulseaudioFull;
   };

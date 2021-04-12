@@ -2,7 +2,7 @@
 
 with lib;
 {
-  config = mkIf (config.desktop != "none") {
+  config = mkIf (config.custom.desktop != "none") {
     services.xserver = {
       enable = true;
       layout = "us";

@@ -3,7 +3,7 @@
 
 with lib;
 {
-  config = mkIf (config.desktop == "sway") {
+  config = mkIf (config.custom.desktop == "sway") {
     # sway related hardware configuration
     hardware = {
       pulseaudio.enable = true;

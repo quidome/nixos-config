@@ -15,10 +15,13 @@
     #../../services/audio/pipewire
   ];
 
-  desktop = "gnome";
-  use_wpa = false;
-  use_pipewire = false;
-  use_flatpak = true;
+  custom = {
+    desktop = "gnome";
+    wpa.enable = true;
+
+    flatpak.enable = true;
+    pipewire.enable = true;
+  };
 
   networking.hostName = "linux-10194"; # Define your hostname.
 

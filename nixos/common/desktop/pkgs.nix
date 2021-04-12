@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 
 {
-  config = lib.mkIf (config.services.xserver.enable) {
+  config = lib.mkIf (config.custom.desktop != "none") {
     environment.systemPackages = with pkgs; [
       # base
       xclip

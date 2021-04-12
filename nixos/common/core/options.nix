@@ -2,21 +2,15 @@
 
 with lib;
 {
-  options = {
-    # make an option to enable or desable the desktop environment
+  options.custom = {
     desktop = mkOption {
       type = types.str;
       default = "none";
       description = "Sets the desktop environment; set to: none or i3.";
     };
 
-    use_wpa = mkOption {
-      type = types.bool;
-      default = true;
-      description = "Whether to use wpa_supplicant instead of network manager. Defaults to true";
-    };
-
-    use_pipewire = mkEnableOption "Enable pipewire audio. Defaults to false (use pulseaudio)";
-    use_flatpak = mkEnableOption "Enable flatpak";
+    wpa.enable = mkEnableOption "Whether to use wpa_supplicant instead of network manager. Defaults to false";
+    flatpak.enable = mkEnableOption "Enable flatpak";
+    pipewire.enable = mkEnableOption "Enable pipewire audio. Defaults to false (use pulseaudio)";
   };
 }

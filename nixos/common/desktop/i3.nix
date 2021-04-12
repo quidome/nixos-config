@@ -9,7 +9,7 @@ with lib;
 #     { config = config.nixpkgs.config; };
 # in
 {
-  config = mkIf (config.desktop == "i3") {
+  config = mkIf (config.custom.desktop == "i3") {
     # i3 related hardware configuration
     hardware = {
       #pulseaudio.enable = true;
