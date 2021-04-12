@@ -28,6 +28,7 @@
       ripgrep
       yq
       ytop # system monitor
+      unzip
     
       # dev tools
       gnumake
