@@ -26,6 +26,7 @@ with lib; {
         gnomeExtensions.dash-to-dock
         gnomeExtensions.emoji-selector
         gnomeExtensions.sound-output-device-chooser
+        gjs
       ];
 
       # GTK3 global theme (widget and icon theme)

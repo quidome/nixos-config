@@ -9,13 +9,6 @@ in
   };
 
   config = mkIf cfg.enable {
-    home.packages = with pkgs; [
-      # gnome extensions
-      gnomeExtensions.dash-to-dock
-      gnomeExtensions.sound-output-device-chooser
-      gnomeExtensions.emoji-selector
-      gjs
-    ];
     # gnome settings by dconf
     dconf.settings = {
       "apps/guake/general" = {
