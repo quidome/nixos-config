@@ -3,18 +3,6 @@
 {
 
   nixpkgs.config.allowUnfree = true;
-  home.packages = with pkgs; [
-    # basics
-    ldns
-    jq
-    yq
-    gopass
-    rcm           # dotfile manager
-    # a bunch of rust tools replacing good old stuff
-    procs # ps
-    ytop # system monitor
-    exa
-  ];
 
   home.sessionVariables = {
     EDITOR = "nvim";
