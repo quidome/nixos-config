@@ -16,10 +16,6 @@ with lib; {
     environment = {
       # add some desktop applications
       systemPackages = with pkgs; [
-        # theming
-        arc-icon-theme
-        arc-theme
-
         # gnome tweaks
         gnome3.gnome-tweaks
         guake
@@ -28,16 +24,6 @@ with lib; {
         gnomeExtensions.sound-output-device-chooser
         gjs
       ];
-
-      # GTK3 global theme (widget and icon theme)
-      etc."xdg/gtk-3.0/settings.ini" = {
-        text = ''
-          [Settings]
-          gtk-icon-theme-name=Arc
-          gtk-theme-name=Arc-dark
-          gtk-application-prefer-dark-theme = true
-        '';
-      };
     };
   };
 }
