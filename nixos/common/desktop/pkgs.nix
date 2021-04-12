@@ -8,10 +8,10 @@
 
       # dev
       emacs
+      nanum-gothic-coding # spacemacs fallback font
       exercism
       linuxPackages.bpftrace
       meld
-      nanum-gothic-coding # spacemacs fallback font
       vscode
 
       # net
