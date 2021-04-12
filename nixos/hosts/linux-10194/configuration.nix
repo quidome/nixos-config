@@ -17,10 +17,10 @@
 
   custom = {
     desktop = "gnome";
-    wpa.enable = true;
+    wpa.enable = false;
 
     flatpak.enable = true;
-    pipewire.enable = true;
+    pipewire.enable = false;
   };
 
   networking.hostName = "linux-10194"; # Define your hostname.
