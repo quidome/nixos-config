@@ -38,7 +38,6 @@ with lib;
         kate
         ark
         kdeplasma-addons
-        # pavucontrol
         gwenview
 
         # gnupg

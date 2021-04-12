@@ -28,6 +28,7 @@
       spotify
       zathura
       kdenlive
+      pavucontrol
 
       # cloud
       k9s
