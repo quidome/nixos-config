@@ -31,6 +31,9 @@ in {
   #elemental.program.wm.i3.enable = false;
 
   nixpkgs.config.allowUnfree = true;
-  #home.packages = with pkgs; [
-  #];
+  home.packages = with pkgs; [
+    file binutils-unwrapped # needed for ruby gems
+    ruby_2_5 bundler rubyPackages_2_5.rake
+    gems_2_5.puppet5 gems_2_5.pdk
+  ];
 }
