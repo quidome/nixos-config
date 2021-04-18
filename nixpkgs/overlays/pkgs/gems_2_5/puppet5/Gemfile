@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
-gem "puppet", "5.5.22"
+gem "puppet", "6.13.0"
 gem "puppet-lint"
 gem "puppet-syntax"
 gem "puppetlabs_spec_helper"
