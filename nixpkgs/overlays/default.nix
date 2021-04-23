@@ -1,5 +1,6 @@
 self: super: 
 rec {
-  gems_2_5.pdk = super.callPackage ./pkgs/gems_2_5/pdk { };
-  gems_2_5.puppet5 = super.callPackage ./pkgs/gems_2_5/puppet5 { };
+  gems.pdk = super.callPackage ./pkgs/gems/pdk { };
+  gems.rubocop = super.callPackage ./pkgs/gems/rubocop { };
+  gems.puppet5 = super.callPackage ./pkgs/gems/puppet5 { };
 }

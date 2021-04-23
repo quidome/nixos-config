@@ -2,7 +2,7 @@ with import <nixpkgs> {};
 stdenv.mkDerivation {
   name = "env";
   buildInputs = [
-    ruby_2_5.devEnv
+    ruby.devEnv
     git
     sqlite
     libpcap
