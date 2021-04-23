@@ -42,10 +42,14 @@
 
   # install packages unique for this host
   environment.systemPackages = with pkgs; [
+    # generic tools
+    pwgen
+
     # dev
-    # jetbrains.idea-ultimate    # flatpak version is more up to date
+    jetbrains.idea-ultimate    # flatpak version is more up to date
     ruby_2_5
     vagrant
+    gitAndTools.gitflow
 
     # net
     filezilla
@@ -56,7 +60,7 @@
     openssl
     perl532Packages.AppClusterSSH
     rambox
-    #teams    # using flatpak for now
+    teams    # flatpak version is more up to date
     tmux-cssh
     teleconsole
 
