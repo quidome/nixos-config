@@ -16,8 +16,8 @@
   ];
 
   custom = {
-    desktop = "gnome";
-    wpa.enable = false;
+    desktop = "i3";
+    wpa.enable = true;
 
     flatpak.enable = true;
     pipewire.enable = false;
