@@ -7,6 +7,7 @@
       vim
       htop
       lsof
+      file
 
       # network
       wget
@@ -36,6 +37,7 @@
       unzip
     
       # dev tools
+      binutils-unwrapped
       gnumake
       gcc
       git

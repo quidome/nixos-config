@@ -32,7 +32,6 @@ in {
 
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
-    file binutils-unwrapped # needed for ruby gems
     ruby hiera-eyaml
     gems.pdk
     gems.rubocop
