@@ -29,12 +29,19 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  boot.kernel.sysctl = {
+    "vm.swappiness" = 1;
+  };
+
   # deal with apple keyboard
   boot.extraModprobeConfig = ''
     options hid_apple swap_opt_cmd=1
     options hid_apple swap_fn_leftctrl=1
   '';
 
+  # install packages unique for this host
+  environment.systemPackages = with pkgs; [
+  ];
 
   # use gnupg agent for ssh
   programs = {
