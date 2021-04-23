@@ -19,7 +19,7 @@
     desktop = "i3";
     wpa.enable = true;
 
-    flatpak.enable = true;
+    flatpak.enable = false;
     pipewire.enable = false;
   };
 
