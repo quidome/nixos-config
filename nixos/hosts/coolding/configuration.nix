@@ -41,6 +41,7 @@
 
   # install packages unique for this host
   environment.systemPackages = with pkgs; [
+    discord
   ];
 
   # use gnupg agent for ssh
