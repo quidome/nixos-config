@@ -7,7 +7,7 @@ with lib;
 
     # services required for plasma
     services = {
-      avahi.enable = true;
+      # avahi.enable = true;
       accounts-daemon.enable = true;
 
       # actual kde stuff
