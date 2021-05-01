@@ -8,6 +8,7 @@ with lib;
       layout = "us";
       libinput.enable = true;
       xkbOptions = "terminate:ctrl_alt_bksp,caps:none";
+      useGlamor = true;
     };
 
     fonts.fonts = with pkgs; [
