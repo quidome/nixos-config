@@ -97,6 +97,8 @@
   services = {
     printing.enable = true;
     logind.extraConfig = "HandlePowerKey=suspend";
+
+    xserver.videoDrivers = [ "modesetting" ];
   };
 
   virtualisation.virtualbox.host.enable = true;
