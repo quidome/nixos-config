@@ -67,7 +67,6 @@
     rambox
     teams    # flatpak version is more up to date
     tmux-cssh
-    teleconsole
 
     # media
     drawio
