@@ -5,12 +5,6 @@ with lib;
 {
   config = mkIf (config.custom.desktop == "kde") {
 
-    # hardware required for plasma
-    hardware = {
-      bluetooth.enable = true;
-      bluetooth.powerOnBoot = true;
-    };
-
     # services required for plasma
     services = {
       avahi.enable = true;

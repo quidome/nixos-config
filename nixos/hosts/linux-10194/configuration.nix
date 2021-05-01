@@ -40,6 +40,11 @@
     };
   };
 
+  hardware = {
+    bluetooth.enable = true;
+    bluetooth.powerOnBoot = true;
+  };
+
   # install packages unique for this host
   environment.systemPackages = with pkgs; [
     # generic tools
