@@ -39,6 +39,11 @@
     options hid_apple swap_fn_leftctrl=1
   '';
 
+  hardware = {
+    bluetooth.enable = true;
+    bluetooth.powerOnBoot = true;
+  };
+
   # install packages unique for this host
   environment.systemPackages = with pkgs; [
     discord
@@ -54,6 +59,8 @@
   services = {
     printing.enable = true;
     logind.extraConfig = "HandlePowerKey=suspend";
+
+    xserver.videoDrivers = [ "modesetting" ];
   };
 
   virtualisation.docker.enable = true;
