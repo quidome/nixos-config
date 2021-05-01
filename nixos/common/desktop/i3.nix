@@ -11,13 +11,6 @@ with lib;
 {
   config = mkIf (config.custom.desktop == "i3") {
     # i3 related hardware configuration
-    hardware = {
-      #pulseaudio.enable = true;
-
-      bluetooth.enable = true;
-      bluetooth.powerOnBoot = true;
-    };
-
     programs = {
       gnupg.agent.pinentryFlavor = "gtk2";
 
@@ -29,7 +22,6 @@ with lib;
       autorandr.enable = true;
 
       xserver = {
-        enable = true;
         desktopManager.xterm.enable = false;
         displayManager.startx.enable = true;
 
