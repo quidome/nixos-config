@@ -35,10 +35,16 @@ with lib;
         bluedevil
         kdeApplications.spectacle
         kdeApplications.kompare
+        pkgs.kdeApplications.dolphin-plugins
+        pkgs.kdeApplications.kipi-plugins
+        pkgs.kdeApplications.kio-extras
         kate
         ark
         kdeplasma-addons
         gwenview
+        kde-gtk-config
+        sddm-kcm
+        krename
 
         # gnupg
         kgpg
