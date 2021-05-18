@@ -38,5 +38,6 @@ in {
     gems.pdk
     gems.rubocop
     gems.puppet5
+    asciidoc
   ];
 }
