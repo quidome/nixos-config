@@ -21,14 +21,16 @@ in {
   home.stateVersion = "20.09";
 
   # elemental setup
-  elemental.user = user;
-  elemental.role = "workstation";
-  elemental.host = hostname;
+  elemental = {
+    user = user;
+    role = "workstation";
+    host = hostname;
 
-  # feature toggles
-  elemental.program.terminal.tmux.enable = true;
-  elemental.program.de.gnome.enable = false;
-  elemental.program.wm.i3.enable = true;
+    # feature toggles
+    program.terminal.tmux.enable = true;
+    program.de.gnome.enable = false;
+    program.wm.i3.enable = true;
+  };
 
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
