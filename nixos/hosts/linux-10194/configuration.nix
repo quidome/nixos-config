@@ -19,7 +19,7 @@
     desktop = "i3";
     wpa.enable = true;
 
-    flatpak.enable = false;
+    flatpak.enable = true;
     pipewire.enable = false;
   };
 
@@ -65,7 +65,7 @@
     openssl
     perl532Packages.AppClusterSSH
     rambox
-    teams    # flatpak version is more up to date
+    #teams    # flatpak version is more up to date
     tmux-cssh
 
     # media
