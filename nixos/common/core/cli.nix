@@ -35,6 +35,7 @@
       yq
       ytop # system monitor
       unzip
+      cointop
     
       # dev tools
       binutils-unwrapped
