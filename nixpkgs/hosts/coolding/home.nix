@@ -26,8 +26,8 @@ in {
 
   # feature toggles
   elemental.program.terminal.tmux.enable = true;
-  elemental.program.de.gnome.enable = true;
-  #elemental.program.wm.i3.enable = true;
+  elemental.program.de.gnome.enable = false;
+  elemental.program.wm.i3.enable = true;
 
   nixpkgs.config.allowUnfree = true;
 }

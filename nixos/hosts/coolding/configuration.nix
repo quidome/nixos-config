@@ -16,8 +16,8 @@
   ];
 
   custom = {
-    desktop = "gnome";
-    wpa.enable = false;
+    desktop = "i3";
+    wpa.enable = true;
 
     flatpak.enable = true;
     pipewire.enable = false;
@@ -47,6 +47,7 @@
   # install packages unique for this host
   environment.systemPackages = with pkgs; [
     discord
+    cointop
   ];
 
   # use gnupg agent for ssh
