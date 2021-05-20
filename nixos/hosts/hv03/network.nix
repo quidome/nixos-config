@@ -6,9 +6,6 @@ let
 in {
   # disable dhcp for all interfaces
   networking.useDHCP = false;
-  networking.interfaces.enp1s0.useDHCP = false;
-  networking.interfaces.enp3s0.useDHCP = false;
-  networking.interfaces.vlan40.useDHCP = false;
 
   # vlan configuration
   networking.vlans.vlan40.interface = "enp2s0";
