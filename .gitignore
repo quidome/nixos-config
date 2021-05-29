@@ -1,5 +1,5 @@
 machines/*/result
 result
-nixos/configuration.nix
-nixos/hardware-configuration.nix
-nixpkgs/home.nix
+configuration.nix
+hardware-configuration.nix
+home-manager/home.nix
