@@ -11,6 +11,7 @@ in {
     ../../modules/basics.nix
     ../../modules/vim
     ../../modules/gui.nix
+    #../../modules/sway.nix
     ../../program
     ../../user
   ];
