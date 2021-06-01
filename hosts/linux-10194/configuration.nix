@@ -55,6 +55,7 @@
     ruby_2_5
     vagrant
     gitAndTools.gitflow
+    asciidoctor
 
     # net
     filezilla
@@ -70,6 +71,8 @@
 
     # media
     drawio
+    toot
+    ncspot
 
     # python setup
     black
