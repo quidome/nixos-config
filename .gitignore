@@ -1,5 +1,1 @@
-machines/*/result
-result
-configuration.nix
-hardware-configuration.nix
 home-manager/home.nix
