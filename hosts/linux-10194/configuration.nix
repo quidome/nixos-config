@@ -16,8 +16,8 @@
   ];
 
   custom = {
-    desktop = "kde";
-    wpa.enable = false;
+    desktop = "i3";
+    wpa.enable = true;
 
     flatpak.enable = false;
     pipewire.enable = false;
