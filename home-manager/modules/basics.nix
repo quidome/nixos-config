@@ -15,8 +15,7 @@
     config.style = "header,snip";
   };
 
-
-  programs.home-manager.enable = true; 
+  programs.home-manager.enable = true;
   programs.ssh.enable = true;
 
   services = {
