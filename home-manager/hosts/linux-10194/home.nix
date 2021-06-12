@@ -32,6 +32,8 @@ in {
     program.wm.i3.enable = true;
   };
 
+  programs.taskwarrior.enable = true;
+
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
     ruby hiera-eyaml
