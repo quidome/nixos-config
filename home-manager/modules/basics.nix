@@ -15,6 +15,11 @@
       config.style = "header,snip";
     };
 
+    exa = {
+      enable = true;
+      enableAliases = true;
+    };
+
     home-manager.enable = true;
     ssh.enable = true;
   };
