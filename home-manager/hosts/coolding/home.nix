@@ -18,7 +18,7 @@ in {
 
   home.username = user;
   home.homeDirectory = userHome;
-  home.stateVersion = "20.09";
+  home.stateVersion = "21.05";
 
   # elemental setup
   elemental.user = user;
