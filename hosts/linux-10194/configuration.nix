@@ -45,6 +45,11 @@
     bluetooth.powerOnBoot = true;
   };
 
+  # TODO: fix this security issue
+  nixpkgs.config.permittedInsecurePackages = [
+    "rambox-0.7.7"
+  ];
+
   # install packages unique for this host
   environment.systemPackages = with pkgs; [
     # generic tools
