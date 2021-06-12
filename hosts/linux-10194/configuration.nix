@@ -57,7 +57,7 @@
 
     # dev
     jetbrains.idea-ultimate    # flatpak version is more up to date
-    ruby_2_5
+    ruby
     vagrant
     gitAndTools.gitflow
     asciidoctor
@@ -81,7 +81,7 @@
 
     # python setup
     black
-    (python38.withPackages (ps:
+    (python3.withPackages (ps:
       with ps; [
         flake8
         pip
