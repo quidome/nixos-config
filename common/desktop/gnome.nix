@@ -7,7 +7,7 @@ with lib; {
     services.xserver = {
       displayManager.gdm.enable = true;
       displayManager.gdm.wayland = false;
-      desktopManager.gnome3.enable = true;
+      desktopManager.gnome.enable = true;
     };
 
     programs.gnupg.agent.pinentryFlavor = "gnome3";
