@@ -33,7 +33,7 @@
       rcm           # dotfile manager
       ripgrep
       yq
-      ytop # system monitor
+      bottom
       unzip
       cointop
     

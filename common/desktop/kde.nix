@@ -27,11 +27,11 @@ with lib;
         okular
         yakuake
         bluedevil
-        kdeApplications.spectacle
-        kdeApplications.kompare
-        pkgs.kdeApplications.dolphin-plugins
-        pkgs.kdeApplications.kipi-plugins
-        pkgs.kdeApplications.kio-extras
+        spectacle
+        kompare
+        libsForQt5.dolphin-plugins
+        libsForQt5.kipi-plugins
+        libsForQt5.kio-extras
         kate
         ark
         kdeplasma-addons
