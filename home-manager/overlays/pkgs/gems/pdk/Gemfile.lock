@@ -5,13 +5,15 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     childprocess (0.7.1)
       ffi (~> 1.0, >= 1.0.11)
-    concurrent-ruby (1.1.8)
+    concurrent-ruby (1.1.9)
     cri (2.15.11)
     deep_merge (1.2.1)
     diff-lcs (1.3)
-    facter (2.5.7)
+    facter (4.2.1)
+      hocon (~> 1.3)
+      thor (>= 1.0.1, < 2.0)
     fast_gettext (1.1.2)
-    ffi (1.15.0)
+    ffi (1.15.1)
     gettext (3.2.9)
       locale (>= 2.0.5)
       text (>= 1.3.0)
@@ -20,6 +22,7 @@ GEM
       gettext (>= 3.0.2, < 3.3.0)
       locale
     hitimes (1.3.0)
+    hocon (1.3.1)
     httpclient (2.8.3)
     json-schema (2.8.0)
       addressable (>= 2.4)
@@ -29,14 +32,14 @@ GEM
     pastel (0.8.0)
       tty-color (~> 0.5)
     pathspec (0.2.1)
-    pdk (1.18.1)
+    pdk (2.1.0)
       bundler (>= 1.15.0, < 3.0.0)
       childprocess (~> 0.7.1)
       concurrent-ruby (~> 1.1.5)
       cri (~> 2.10)
       deep_merge (~> 1.1)
       diff-lcs (= 1.3)
-      facter (~> 2.5.1)
+      facter (>= 2.5.1, < 5.0.0)
       ffi (>= 1.9.25, < 2.0.0)
       gettext-setup (~> 0.24)
       hitimes (= 1.3.0)
@@ -45,11 +48,12 @@ GEM
       json_pure (~> 2.1.0)
       minitar (~> 0.6)
       pathspec (~> 0.2.1)
-      tty-prompt (~> 0.13)
+      tty-prompt (~> 0.22)
       tty-spinner (~> 0.5)
       tty-which (~> 0.3)
     public_suffix (4.0.6)
     text (1.3.1)
+    thor (1.1.0)
     tty-color (0.6.0)
     tty-cursor (0.7.1)
     tty-prompt (0.23.1)
@@ -69,7 +73,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  pdk (< 2)
+  pdk
 
 BUNDLED WITH
    2.1.4

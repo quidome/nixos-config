@@ -95,10 +95,10 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "070l1a3aqccr7qkzfcfg0ysw3xv69mkz1ai64c07gspgx3rlj33v";
+      sha256 = "1r4q5qw5yihv8m8z102glzrk8r9g30hgbpzw5izhk63w6qnx22kh";
       type = "gem";
     };
-    version = "0.2.1";
+    version = "1.0.0";
   };
   puppet = {
     dependencies = ["facter" "fast_gettext" "hiera" "locale" "multi_json"];
@@ -203,10 +203,10 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "11dh04msr2sx2mx9g6wyrfa3wcc3b8pch20z85g23pdrqhxdg5zf";
+      sha256 = "0d15qbhgwiaxfdrfrc5pil84xgjk72w1abxw9kbgf2jahgw6mnpn";
       type = "gem";
     };
-    version = "2.8.0";
+    version = "2.9.0";
   };
   rspec-puppet-facts = {
     dependencies = ["facter" "facterdb" "puppet"];

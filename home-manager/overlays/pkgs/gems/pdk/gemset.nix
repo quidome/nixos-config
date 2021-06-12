@@ -26,10 +26,10 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "0mr23wq0szj52xnj0zcn1k0c7j4v79wlwbijkpfcscqww3l6jlg3";
+      sha256 = "0nwad3211p7yv9sda31jmbyw6sdafzmdi2i2niaz6f0wk5nq9h0f";
       type = "gem";
     };
-    version = "1.1.8";
+    version = "1.1.9";
   };
   cri = {
     groups = ["default"];
@@ -62,14 +62,15 @@
     version = "1.3";
   };
   facter = {
+    dependencies = ["hocon" "thor"];
     groups = ["default"];
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "1aqkfybnmifajfm8a1sk7rigpyf3lssbd8dcjrj60g2gkjmarf7j";
+      sha256 = "01k67xh4hzpik8sipgf5ycvqqb4pz9dvgk7jkngax8j6irj7v62p";
       type = "gem";
     };
-    version = "2.5.7";
+    version = "4.2.1";
   };
   fast_gettext = {
     groups = ["default"];
@@ -86,10 +87,10 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "0nq1fb3vbfylccwba64zblxy96qznxbys5900wd7gm9bpplmf432";
+      sha256 = "15nn2v70rql15vb0pm9cg0f3xsaslwjkv6xgz0k5jh48idmfw9fi";
       type = "gem";
     };
-    version = "1.15.0";
+    version = "1.15.1";
   };
   gettext = {
     dependencies = ["locale" "text"];
@@ -122,6 +123,16 @@
       type = "gem";
     };
     version = "1.3.0";
+  };
+  hocon = {
+    groups = ["default"];
+    platforms = [];
+    source = {
+      remotes = ["https://rubygems.org"];
+      sha256 = "0mifv4vfvppfdpkd0cwgy634sj0aplz6ys84sp8s11qrnm6vlnmn";
+      type = "gem";
+    };
+    version = "1.3.1";
   };
   httpclient = {
     groups = ["default"];
@@ -201,10 +212,10 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "0m89jm1r4mjndrfphvyff3v0nk75sm082mpvhnwhb0jpmn5y10ff";
+      sha256 = "0wbzwzak2xd88935x56gl677wg53c8988sjwnm12266ickvmd2dj";
       type = "gem";
     };
-    version = "1.18.1";
+    version = "2.1.0";
   };
   public_suffix = {
     groups = ["default"];
@@ -225,6 +236,16 @@
       type = "gem";
     };
     version = "1.3.1";
+  };
+  thor = {
+    groups = ["default"];
+    platforms = [];
+    source = {
+      remotes = ["https://rubygems.org"];
+      sha256 = "18yhlvmfya23cs3pvhr1qy38y41b6mhr5q9vwv5lrgk16wmf3jna";
+      type = "gem";
+    };
+    version = "1.1.0";
   };
   tty-color = {
     groups = ["default"];
