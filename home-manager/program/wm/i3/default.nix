@@ -16,6 +16,8 @@ in
       arc-icon-theme
     ];
 
+    services.flameshot.enable = true;
+
     xdg.configFile."mimeapps.list".force = true;
     xdg.mimeApps = {
       enable = true;

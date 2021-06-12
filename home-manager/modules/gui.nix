@@ -50,9 +50,4 @@
     enable = true;
     theme = "Pop-Dark.rasi";
   };
-
-  # setup services
-  services = {
-    flameshot.enable = true;
-  };
 }
