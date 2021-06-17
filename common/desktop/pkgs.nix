@@ -13,7 +13,7 @@
       vscode
 
       # net2
-      firefox
+      firefox-wayland
       chromium
       element-desktop
       signal-desktop
