@@ -12,7 +12,7 @@
     ./secret.nix
     ../../common
     ../../services
-    #../../services/audio/pipewire
+    ../../modules
   ];
 
   custom = {
@@ -20,6 +20,9 @@
     wpa.enable = true;
 
     flatpak.enable = false;
+  };
+
+  settings = {
     pipewire.enable = false;
   };
 
