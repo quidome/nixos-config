@@ -16,10 +16,8 @@ with lib; {
     environment = {
       # add some desktop applications
       systemPackages = with pkgs; [
-        # gnome tweaks
         gnome3.gnome-tweaks
         guake
-        gnomeExtensions.dash-to-dock
         gnomeExtensions.emoji-selector
         gnomeExtensions.sound-output-device-chooser
         gjs
