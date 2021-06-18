@@ -34,6 +34,8 @@
 
   boot.kernel.sysctl = {
     "vm.swappiness" = 1;
+    "net.ipv6.conf.wlp2s0.disable_ipv6" = true;
+    "net.ipv6.conf.enp0s31f6.disable_ipv6" = true;
   };
 
   boot.initrd.luks.devices = {
