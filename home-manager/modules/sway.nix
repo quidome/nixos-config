@@ -49,6 +49,16 @@ in {
     };
   };
 
+  systemd.user.targets.sway-session = {
+    Unit = {
+      Description = "Sway - Wayland window manager";
+      Documentation = [ "man:sway(5)" ];
+      BindsTo = [ "graphical-session.target" ];
+      Wants = [ "graphical-session-pre.target" ];
+      After = [ "graphical-session-pre.target" ];
+    };
+  };
+
   systemd.user.services.sway = {
     Unit = {
       Description = "Sway - Wayland window manager";
