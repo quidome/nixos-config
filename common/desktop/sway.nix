@@ -4,20 +4,42 @@
 with lib;
 {
   config = mkIf (config.custom.desktop == "sway") {
-    # sway related hardware configuration
-    hardware = {
-      pulseaudio.enable = true;
-
-      bluetooth.enable = true;
-      bluetooth.powerOnBoot = true;
-    };
-
     services.xserver.displayManager.startx.enable = true;
 
-    programs.sway.enable = true;
+    programs.sway = {
+      enable = true;
+      wrapperFeatures.gtk = true; # so that gtk works properly
+      extraPackages = with pkgs; [
+        swaylock
+        swayidle
+        wl-clipboard
+        mako # notification daemon
+        alacritty # Alacritty is the default terminal in the config
+        dmenu # Dmenu is the default in the config but i recommend wofi since its wayland native
 
-    fonts.fonts = with pkgs; [
-      font-awesome
-    ];
+        # packages required for my desktop
+        wofi
+        waybar
+        mako
+        kanshi
+        slurp
+        grim
+        brightnessctl
+        pamixer
+      ];
+    };
+
+    fonts.fonts = with pkgs; [ font-awesome ];
+
+    xdg = {
+      portal = {
+        enable = true;
+        extraPortals = with pkgs; [
+          xdg-desktop-portal-wlr
+          xdg-desktop-portal-gtk
+        ];
+        gtkUsePortal = true;
+      };
+    };
   };
 }

@@ -12,15 +12,18 @@
     ./secret.nix
     ../../common
     ../../services
-    #../../services/audio/pipewire
+    ../../modules
   ];
 
   custom = {
-    desktop = "i3";
+    desktop = "sway";
     wpa.enable = true;
 
     flatpak.enable = true;
-    pipewire.enable = false;
+  };
+
+  settings = {
+    pipewire.enable = true;
   };
 
   networking.hostName = "coolding"; # Define your hostname.
@@ -36,7 +39,7 @@
   # deal with apple keyboard
   boot.extraModprobeConfig = ''
     options hid_apple swap_opt_cmd=1
-    options hid_apple swap_fn_leftctrl=1
+    #options hid_apple swap_fn_leftctrl=1
   '';
 
   hardware = {
