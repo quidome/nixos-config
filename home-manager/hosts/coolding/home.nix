@@ -11,7 +11,7 @@ in {
     ../../modules/basics.nix
     ../../modules/vim
     ../../modules/gui.nix
-    #../../modules/sway.nix
+    ../../modules/sway.nix
     ../../program
     ../../user
   ];
@@ -28,7 +28,7 @@ in {
   # feature toggles
   elemental.program.terminal.tmux.enable = true;
   elemental.program.de.gnome.enable = false;
-  elemental.program.wm.i3.enable = true;
+  elemental.program.wm.i3.enable = false;
 
   nixpkgs.config.allowUnfree = true;
 }
