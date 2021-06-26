@@ -13,7 +13,7 @@ in
     dconf.settings = {
       "apps/guake/general" = {
         gtk-prefer-dark-theme = true;
-        gtk-theme-name = "Arc-Dark";
+        gtk-theme-name = "Adwaita-dark";
         use-scrollbar = false;
         use-trayicon = false;
         window-tabbar = false;
