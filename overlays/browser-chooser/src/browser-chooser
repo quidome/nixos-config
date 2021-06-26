@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+graphical_env=$(loginctl show-session $(awk '/tty/ {print $1}' <(loginctl)) -p Type | awk -F= '{print $2}')
+
+if [ "$graphical_env" == "wayland" ] ; then
+  menu_provider='wofi -d'
+else
+  menu_provider='rofi -dmenu'
+fi
+
+
+#\"| xclip -selection c\"\n"| wl-copy"\ntemp_firefox
+
+menu=$(echo -e "firefox -P home\nfirefox -P work\nchromium\nfirewarden chromium\n| xclip -selection c\n| wl-copy\ntemp_firefox" | $menu_provider -p "browser ")
+
+if [[ $menu == \|* ]]; then
+    eval echo \"$@\" $menu > /dev/null 2>&1 &
+else
+    eval $menu \"$@\" > /dev/null 2>&1 &
+fi

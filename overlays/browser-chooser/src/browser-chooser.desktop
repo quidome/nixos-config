@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=browser-chooser %U
+Terminal=false
+Name=Browser Chooser
+Icon=internet-web-browser
+Comment=
+GenericName=Web Browser
+MimeType=text/html;application/xml;application/xml;application/xhtml+xml;
+Categories=Network;WebBrowser;

@@ -15,6 +15,8 @@
     ../../modules
   ];
 
+  nixpkgs.overlays = [(import ../../overlays)];
+
   custom = {
     desktop = "i3";
     wpa.enable = true;
