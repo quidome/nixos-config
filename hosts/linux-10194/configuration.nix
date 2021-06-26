@@ -63,7 +63,7 @@
     pwgen
 
     # dev
-    jetbrains.idea-ultimate    # flatpak version is more up to date
+    jetbrains.idea-ultimate
     ruby
     vagrant
     gitAndTools.gitflow
@@ -78,7 +78,7 @@
     openssl
     perl532Packages.AppClusterSSH
     rambox
-    teams    # flatpak version is more up to date
+    teams
     tmux-cssh
 
     # media
