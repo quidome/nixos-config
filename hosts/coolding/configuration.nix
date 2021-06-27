@@ -15,6 +15,9 @@
     ../../modules
   ];
 
+  # import overlays
+  nixpkgs.overlays = [ (import ../../overlays) ];
+
   custom = {
     desktop = "sway";
     wpa.enable = true;
@@ -51,6 +54,7 @@
   environment.systemPackages = with pkgs; [
     discord
     cointop
+    browser-chooser
   ];
 
   # use gnupg agent for ssh
