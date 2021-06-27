@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 
-graphical_env=$(loginctl show-session $(awk '/tty/ {print $1}' <(loginctl)) -p Type | awk -F= '{print $2}')
+# disable this for now, restore this when playing with wayland
+#graphical_env=$(loginctl show-session $(awk '/tty/ {print $1}' <(loginctl)) -p Type | awk -F= '{print $2}')
 
-if [ "$graphical_env" == "wayland" ] ; then
-  menu_provider='wofi -d'
-else
+#if [ "$graphical_env" == "wayland" ] ; then
+#  menu_provider='bemenu -bl7'
+#else
   menu_provider='rofi -dmenu'
-fi
+#fi
 
 
 #\"| xclip -selection c\"\n"| wl-copy"\ntemp_firefox
