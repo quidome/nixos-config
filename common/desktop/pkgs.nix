@@ -14,6 +14,7 @@
 
       # net2
       firefox-wayland
+      browser-chooser
       chromium
       element-desktop
       signal-desktop

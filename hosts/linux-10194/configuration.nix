@@ -80,7 +80,6 @@
     rambox
     teams
     tmux-cssh
-    browser-chooser
 
     # media
     drawio

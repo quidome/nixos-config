@@ -54,7 +54,6 @@
   environment.systemPackages = with pkgs; [
     discord
     cointop
-    browser-chooser
   ];
 
   # use gnupg agent for ssh
