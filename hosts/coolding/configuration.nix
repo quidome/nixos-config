@@ -19,7 +19,7 @@
   nixpkgs.overlays = [ (import ../../overlays) ];
 
   custom = {
-    desktop = "sway";
+    desktop = "i3";
     wpa.enable = true;
 
     flatpak.enable = true;
