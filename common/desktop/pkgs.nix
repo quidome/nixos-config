@@ -12,9 +12,9 @@
       meld
       vscode
 
-      # net2
-      firefox-wayland
+      # net
       browser-chooser
+      firefox
       chromium
       element-desktop
       signal-desktop
