@@ -15,7 +15,8 @@
     ../../modules
   ];
 
-  nixpkgs.overlays = [(import ../../overlays)];
+  # import overlays
+  nixpkgs.overlays = [ (import ../../overlays) ];
 
   custom = {
     desktop = "i3";
