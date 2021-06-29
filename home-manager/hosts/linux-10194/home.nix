@@ -4,7 +4,8 @@ let
   user = "qmeijer";
   userHome = "/home/${user}";
   hostname = "linux-10194";
-in {
+in
+{
   imports = [
     ./secret.nix
     ../../modules
