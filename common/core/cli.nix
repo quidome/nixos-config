@@ -3,51 +3,54 @@
 {
   # Basic command line setup
   environment.systemPackages = with pkgs; [
-      # base
-      vim
-      htop
-      lsof
-      file
+    # base
+    file
+    htop
+    lsof
+    openssl
+    pwgen
+    vim
 
-      # network
-      wget
-      curl
-      httpie
-      ldns
+    # network
+    curl
+    httpie
+    ldns
+    wget
 
-      # cloud
-      k9s
-      kubectx
-      stern
+    # cloud
+    k9s
+    kubectx
+    stern
 
-      # handy tools
-      bat
-      docker-compose
-      exa
-      fzf
-      gopass
-      ipcalc
-      jq
-      nixfmt
-      procs # ps
-      rcm           # dotfile manager
-      ripgrep
-      yq
-      bottom
-      unzip
-      cointop
-    
-      # dev tools
-      binutils-unwrapped
-      gnumake
-      gcc
-      git
-      git-crypt
-      gitAndTools.tig
-      shellcheck
-      go
-      dep
-      exercism
-      linuxPackages.bpftrace
-    ];
+    # handy tools
+    bat
+    bottom
+    cointop
+    docker-compose
+    exa
+    fzf
+    gopass
+    ipcalc
+    jq
+    nixfmt
+    nixpkgs-fmt
+    procs # ps
+    rcm # dotfile manager
+    ripgrep
+    unzip
+    yq
+
+    # dev tools
+    binutils-unwrapped
+    dep
+    exercism
+    gcc
+    git
+    git-crypt
+    gitAndTools.tig
+    gnumake
+    go
+    linuxPackages.bpftrace
+    shellcheck
+  ];
 }
