@@ -4,18 +4,19 @@ let
   user = "quidome";
   userHome = "/home/${user}";
   hostname = "coolding";
-in {
+in
+{
   imports = [
     ./secret.nix
+    ../../modules
     ../../elemental.nix
     ../../modules/basics.nix
     ../../modules/vim
-    ../../modules/gui.nix
-  #  ../../modules/sway.nix
     ../../program
     ../../user
   ];
 
+  # home manager required settings
   home.username = user;
   home.homeDirectory = userHome;
   home.stateVersion = "21.05";
@@ -28,7 +29,8 @@ in {
   # feature toggles
   elemental.program.terminal.tmux.enable = true;
   elemental.program.de.gnome.enable = false;
-  elemental.program.wm.i3.enable = true;
 
-  nixpkgs.config.allowUnfree = true;
+  settings = {
+    gui.environment = "i3";
+  };
 }
