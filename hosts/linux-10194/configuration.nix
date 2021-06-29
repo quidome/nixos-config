@@ -53,53 +53,16 @@
     bluetooth.powerOnBoot = true;
   };
 
-  # TODO: fix this security issue
-  nixpkgs.config.permittedInsecurePackages = [
-    "rambox-0.7.7"
-  ];
 
   # install packages unique for this host
   environment.systemPackages = with pkgs; [
     # generic tools
     pwgen
 
-    # dev
-    jetbrains.idea-ultimate
-    ruby
-    vagrant
-    gitAndTools.gitflow
-    asciidoctor
-
     # net
-    filezilla
-    freerdp
     krb5
-    lftp
     openconnect
     openssl
-    perl532Packages.AppClusterSSH
-    rambox
-    teams
-    tmux-cssh
-
-    # media
-    drawio
-    toot
-    ncspot
-
-    # python setup
-    black
-    (python3.withPackages (ps:
-      with ps; [
-        flake8
-        pip
-        requests
-        ruamel_yaml
-        termcolor
-        virtualenvwrapper
-        yamllint
-      ]))
-    openconnect
   ];
 
   # use gnupg agent for ssh

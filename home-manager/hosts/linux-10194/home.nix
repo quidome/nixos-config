@@ -37,9 +37,46 @@ in {
 
   programs.taskwarrior.enable = true;
 
+  # TODO: fix this security issue
+  nixpkgs.config.permittedInsecurePackages = [
+    "rambox-0.7.7"
+  ];
+
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
-    ruby hiera-eyaml
+    # dev
+    jetbrains.idea-ultimate
+    vagrant
+    gitAndTools.gitflow
+    asciidoctor
+
+    # net
+    freerdp
+    lftp
+    perl532Packages.AppClusterSSH
+    rambox
+    teams
+    tmux-cssh
+
+    # media
+    drawio
+
+    # python setup
+    black
+    (python3.withPackages (ps:
+      with ps; [
+        flake8
+        pip
+        requests
+        ruamel_yaml
+        termcolor
+        virtualenvwrapper
+        yamllint
+      ]))
+
+    # ruby setup
+    ruby
+    hiera-eyaml
     gems.pdk
     gems.rubocop
     gems.puppet5
