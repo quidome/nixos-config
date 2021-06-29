@@ -7,10 +7,10 @@ let
 in {
   imports = [
     ./secret.nix
+    ../../modules
     ../../elemental.nix
     ../../modules/basics.nix
     ../../modules/vim
-    ../../modules/gui.nix
     ../../program
     ../../user
   ];
@@ -29,7 +29,10 @@ in {
     # feature toggles
     program.terminal.tmux.enable = true;
     program.de.gnome.enable = false;
-    program.wm.i3.enable = true;
+  };
+
+  settings = {
+    gui.environment = "kde";
   };
 
   programs.taskwarrior.enable = true;
