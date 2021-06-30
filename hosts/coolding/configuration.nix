@@ -18,8 +18,8 @@
   nixpkgs.overlays = [ (import ../../overlays) ];
 
   custom = {
-    desktop = "i3";
-    wpa.enable = true;
+    desktop = "gnome";
+    wpa.enable = false;
 
   };
 
