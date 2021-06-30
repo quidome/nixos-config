@@ -11,7 +11,6 @@
     ./network.nix
     ./secret.nix
     ../../common
-    ../../services
     ../../modules
   ];
 
@@ -22,11 +21,11 @@
     desktop = "i3";
     wpa.enable = true;
 
-    flatpak.enable = true;
   };
 
   settings = {
     pipewire.enable = true;
+    flatpak.enable = true;
   };
 
   networking.hostName = "coolding"; # Define your hostname.

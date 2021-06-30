@@ -1,5 +1,6 @@
 {
   imports = [
-      ./pipewire
+    ./pipewire
+    ./flatpak
   ];
 }
