@@ -14,16 +14,18 @@ let
   kubeMasterHostname = "api.kube";
   kubeMasterAPIServerPort = 443;
 
-in {
+in
+{
   imports =
-    [ # Include the results of the hardware scan.
-    ./hardware-configuration.nix
-    ./zfs-configuration.nix
-    ./nfs.nix
-    ./secrets.nix
-    ./network.nix
-    ../../common
-  ];
+    [
+      # Include the results of the hardware scan.
+      ./hardware-configuration.nix
+      ./zfs-configuration.nix
+      ./nfs.nix
+      ./secrets.nix
+      ./network.nix
+      ../../common
+    ];
 
   # Use the GRUB 2 boot loader.
   boot.loader.grub.enable = true;
@@ -70,7 +72,7 @@ in {
   ];
 
   services.kubernetes = {
-    roles = ["master" "node"];
+    roles = [ "master" "node" ];
     masterAddress = kubeMasterHostname;
     easyCerts = true;
     apiserver = {

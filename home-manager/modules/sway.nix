@@ -14,11 +14,18 @@ let
     ${pkgs.waybar}/bin/waybar
   '';
 
-in {
+in
+{
 
   home.packages = with pkgs; [
     start-sway
-    wofi grim wl-clipboard imv slurp brightnessctl bemenu
+    wofi
+    grim
+    wl-clipboard
+    imv
+    slurp
+    brightnessctl
+    bemenu
   ];
 
   systemd.user.sockets.dbus = {

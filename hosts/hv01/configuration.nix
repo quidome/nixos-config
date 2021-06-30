@@ -7,16 +7,18 @@
 let
   ip_mgt = "172.16.10.64";
   ip_lan = "172.16.40.64";
-in {
+in
+{
   imports =
-    [ # Include the results of the hardware scan.
-    ./hardware-configuration.nix
-    ./zfs-configuration.nix
-    ./nfs.nix
-    ./secrets.nix
-    ./network.nix
-    ../../common
-  ];
+    [
+      # Include the results of the hardware scan.
+      ./hardware-configuration.nix
+      ./zfs-configuration.nix
+      ./nfs.nix
+      ./secrets.nix
+      ./network.nix
+      ../../common
+    ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;

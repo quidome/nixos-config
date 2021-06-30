@@ -6,13 +6,14 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
-    ./hardware-configuration.nix
-    ./network.nix
-    ./secret.nix
-    ../../common
-    ../../modules
-  ];
+    [
+      # Include the results of the hardware scan.
+      ./hardware-configuration.nix
+      ./network.nix
+      ./secret.nix
+      ../../common
+      ../../modules
+    ];
 
   # import overlays
   nixpkgs.overlays = [ (import ../../overlays) ];
