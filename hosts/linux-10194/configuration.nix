@@ -11,7 +11,6 @@
     ./network.nix
     ./secret.nix
     ../../common
-    ../../services
     ../../modules
   ];
 
@@ -19,7 +18,7 @@
   nixpkgs.overlays = [ (import ../../overlays) ];
 
   custom = {
-    desktop = "kde";
+    desktop = "gnome";
     wpa.enable = false;
 
     flatpak.enable = false;

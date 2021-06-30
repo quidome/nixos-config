@@ -29,11 +29,10 @@ in
 
     # feature toggles
     program.terminal.tmux.enable = true;
-    program.de.gnome.enable = false;
   };
 
   settings = {
-    gui.environment = "kde";
+    gui.environment = "gnome";
   };
 
   programs.taskwarrior.enable = true;
