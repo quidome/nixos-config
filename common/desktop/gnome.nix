@@ -20,20 +20,10 @@ with lib; {
         guake
         gnomeExtensions.emoji-selector
         gnomeExtensions.sound-output-device-chooser
+
+        # required for screenshot tool
         gjs
       ];
     };
-
-    # xdg = {
-    #   portal = {
-    #     enable = true;
-    #     extraPortals = with pkgs; [
-    #       xdg-desktop-portal-wlr
-    #       xdg-desktop-portal-gtk
-    #     ];
-    #     gtkUsePortal = true;
-    #   };
-    # };
-
   };
 }
