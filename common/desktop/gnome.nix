@@ -6,7 +6,7 @@ with lib; {
     # use gdm and gnome-shell
     services.xserver = {
       displayManager.gdm.enable = true;
-      displayManager.gdm.wayland = true;
+      displayManager.gdm.wayland = false;
       desktopManager.gnome.enable = true;
     };
 
@@ -21,22 +21,19 @@ with lib; {
         gnomeExtensions.emoji-selector
         gnomeExtensions.sound-output-device-chooser
         gjs
-
-        # wayland compatible rofi replacement
-        wofi
       ];
     };
 
-    xdg = {
-  portal = {
-    enable = true;
-    extraPortals = with pkgs; [
-      xdg-desktop-portal-wlr
-      xdg-desktop-portal-gtk
-    ];
-    gtkUsePortal = true;
-  };
-};
+    # xdg = {
+    #   portal = {
+    #     enable = true;
+    #     extraPortals = with pkgs; [
+    #       xdg-desktop-portal-wlr
+    #       xdg-desktop-portal-gtk
+    #     ];
+    #     gtkUsePortal = true;
+    #   };
+    # };
 
   };
 }
