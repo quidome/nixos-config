@@ -1,4 +1,4 @@
-self: super: 
+self: super:
 rec {
   gems.pdk = super.callPackage ./pkgs/gems/pdk { };
   gems.rubocop = super.callPackage ./pkgs/gems/rubocop { };

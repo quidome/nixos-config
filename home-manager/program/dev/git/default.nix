@@ -29,11 +29,11 @@ in
       extraConfig = {
         core.excludesfile = "${config.home.homeDirectory}/.gitignore_global";
         # Force SSH
-#        url = {
-#          "git@gitlab.bol.io:" = {
-#            insteadOf = "https://gitlab.bol.io/";
-#          };
-#        };
+        #        url = {
+        #          "git@gitlab.bol.io:" = {
+        #            insteadOf = "https://gitlab.bol.io/";
+        #          };
+        #        };
         branch.autosetuprebase = "always";
         color.ui = "auto";
         diff.tool = "meld";

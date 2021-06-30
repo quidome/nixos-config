@@ -2,9 +2,9 @@
 
 {
   imports = [
-      ./gui
-      ./settings
-      ./xorg
-      ./services
+    ./gui
+    ./settings
+    ./xorg
+    ./services
   ];
 }

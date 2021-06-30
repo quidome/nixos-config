@@ -4,7 +4,7 @@
   boot.supportedFilesystems = [ "zfs" ];
   boot.loader.grub.devices = [ "/dev/disk/by-id/ata-CT500MX500SSD1_2011E292A234-part1" ];
   boot.loader.grub.copyKernels = true;
-  boot.kernelParams = ["ip=172.16.10.64::172.16.10.1:255.255.255.0:hv01:enp2s0f0"];
+  boot.kernelParams = [ "ip=172.16.10.64::172.16.10.1:255.255.255.0:hv01:enp2s0f0" ];
   boot = {
     initrd.availableKernelModules = [ "r8169" ];
     initrd.kernelModules = [ "r8169" ];
@@ -23,7 +23,7 @@
         enable = true;
         # To prevent ssh from freaking out because a different host key is used,
         # a different port for dropbear is useful (assuming the same host has also a normal sshd running)
-        port = 2222; 
+        port = 2222;
 
         # check https://search.nixos.org/options?channel=20.09&from=0&size=30&sort=relevance&query=boot.initrd.network.ssh.hostKeys
         # on how to generate hostkeys

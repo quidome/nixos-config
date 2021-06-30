@@ -15,7 +15,7 @@ in
   };
 
   options.settings.role = mkOption {
-    type = with types; enum ["server" "workstation" "homestation"];
+    type = with types; enum [ "server" "workstation" "homestation" ];
     default = "";
     description = ''
       The device role, this determines the window manager and GUI tools to be installed.

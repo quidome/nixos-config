@@ -1,5 +1,5 @@
 { config, pkgs, ... }:
-let 
+let
   user = "quidome";
   userHome = "/home/${user}";
 in
@@ -62,9 +62,9 @@ in
       name = "launch browserchooser";
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" = {
-      binding="<Shift><Super>p";
-      command="/home/${user}/bin/rofipass";
-      name="launch rofipass";
+      binding = "<Shift><Super>p";
+      command = "/home/${user}/bin/rofipass";
+      name = "launch rofipass";
     };
     "org/gnome/shell/extensions/dash-to-dock" = {
       animate-show-apps = false;
@@ -83,7 +83,7 @@ in
       imgur-enable-notification = true;
       save-location = "${userHome}/Pictures/screenshots";
       save-screenshot = true;
-      shortcut-select-area = ["Print"];
+      shortcut-select-area = [ "Print" ];
     };
   };
 }

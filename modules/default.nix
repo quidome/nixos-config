@@ -1,6 +1,6 @@
 {
   imports = [
-      ./hardware
-      ./services
+    ./hardware
+    ./services
   ];
 }
