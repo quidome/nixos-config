@@ -5,5 +5,6 @@
       ./gui
       ./settings
       ./xorg
+      ./services
   ];
 }

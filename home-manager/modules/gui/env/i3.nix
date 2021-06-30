@@ -7,6 +7,8 @@ in
   config = mkIf (cfg.environment == "i3") {
     # Configuration shared between all xorg enabled configs
     settings.xorg.enable = true;
+    settings.services.flameshot.enable = true;
+
 
     # setup programs related to my i3 setup
     programs = {
@@ -30,22 +32,22 @@ in
         urgentOnBell = true;
 
         colorsExtra = ''
-            color0  = #403e41
-            color8  = #727072
-            color1  = #ff6188
-            color9  = #ff6188
-            color2  = #a9dc76
-            color10 = #a9dc76
-            color3  = #ffd866
-            color11 = #ffd866
-            color4  = #fc9867
-            color12 = #fc9867
-            color5  = #ab9df2
-            color13 = #ab9df2
-            color6  = #78dce8
-            color14 = #78dce8
-            color7  = #fcfcfa
-            color15 = #fcfcfa
+          color0  = #403e41
+          color8  = #727072
+          color1  = #ff6188
+          color9  = #ff6188
+          color2  = #a9dc76
+          color10 = #a9dc76
+          color3  = #ffd866
+          color11 = #ffd866
+          color4  = #fc9867
+          color12 = #fc9867
+          color5  = #ab9df2
+          color13 = #ab9df2
+          color6  = #78dce8
+          color14 = #78dce8
+          color7  = #fcfcfa
+          color15 = #fcfcfa
         '';
       };
 
@@ -57,7 +59,7 @@ in
           theme = "slick";
           blocks = [
             {
-              block="load";
+              block = "load";
               interval = 5;
               format = "{5m}";
             }

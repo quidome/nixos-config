@@ -14,7 +14,5 @@ in
       enable = true;
       theme = "Pop-Dark.rasi";
     };
-
-    services.flameshot.enable = true;
   };
 }

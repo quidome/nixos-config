@@ -28,9 +28,8 @@ in
 
   # feature toggles
   elemental.program.terminal.tmux.enable = true;
-  elemental.program.de.gnome.enable = false;
 
   settings = {
-    gui.environment = "i3";
+    gui.environment = "gnome";
   };
 }
