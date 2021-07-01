@@ -34,6 +34,9 @@ in
 
   networking.hostName = "hv03"; # Define your hostname.
 
+  environment.systemPackages = with pkgs; [
+    nerdctl
+  ];
   # Programs config
   programs = {
     gnupg.agent.pinentryFlavor = "curses";
@@ -43,10 +46,10 @@ in
   networking.firewall.enable = false;
 
   # enable docker + metrics
-  virtualisation.docker = {
-    enable = true;
-    extraOptions = "--experimental --metrics-addr=${ip_mgt}:9323";
-  };
+  #virtualisation.docker = {
+  #  enable = true;
+  #  extraOptions = "--experimental --metrics-addr=${ip_mgt}:9323";
+  #};
 
   # enable prometheus node exporter
   services.prometheus.exporters.node = {
@@ -60,37 +63,39 @@ in
     listenAddress = ip_mgt;
   };
 
-  ### kubernetes setup
-  # resolve master hostname
-  networking.extraHosts = "${kubeMasterIP} ${kubeMasterHostname}";
+  #  ### kubernetes setup
+  #  # resolve master hostname
+  #  networking.extraHosts = "${kubeMasterIP} ${kubeMasterHostname}";
+  #
+  #  # packages for administration tasks
+  #  environment.systemPackages = with pkgs; [
+  #    kompose
+  #    kubectl
+  #    kubernetes
+  #  ];
+  #
+  #  services.kubernetes = {
+  #    roles = ["master" "node"];
+  #    masterAddress = kubeMasterHostname;
+  #    #easyCerts = true;
+  #    apiserver = {
+  #      securePort = kubeMasterAPIServerPort;
+  #      advertiseAddress = kubeMasterIP;
+  #    };
+  #
+  #    # use coredns
+  #    #addons.dns.enable = true;
+  #
+  #    # needed if you use swap
+  #    kubelet.extraOpts = "--fail-swap-on=false";
+  #  };
 
-  # packages for administration tasks
-  environment.systemPackages = with pkgs; [
-    kompose
-    kubectl
-    kubernetes
-  ];
-
-  services.kubernetes = {
-    roles = [ "master" "node" ];
-    masterAddress = kubeMasterHostname;
-    easyCerts = true;
-    apiserver = {
-      securePort = kubeMasterAPIServerPort;
-      advertiseAddress = kubeMasterIP;
-    };
-
-    # use coredns
-    addons.dns.enable = true;
-
-    # needed if you use swap
-    kubelet.extraOpts = "--fail-swap-on=false";
-  };
+  virtualisation.containerd.enable = true;
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "20.05"; # Did you read the comment?
+  system.stateVersion = "21.05"; # Did you read the comment?
 }
