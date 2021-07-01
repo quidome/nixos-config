@@ -32,7 +32,7 @@
     gopass
     ipcalc
     jq
-    nixfmt
+    # nixfmt
     nixpkgs-fmt
     procs # ps
     rcm # dotfile manager

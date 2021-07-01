@@ -17,7 +17,7 @@ in
       ./nfs.nix
       ./secrets.nix
       ./network.nix
-      ../../common
+      ../../modules
     ];
 
   # Use the systemd-boot EFI boot loader.

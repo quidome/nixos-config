@@ -11,7 +11,6 @@
       ./hardware-configuration.nix
       ./network.nix
       ./secret.nix
-      ../../common
       ../../modules
     ];
 

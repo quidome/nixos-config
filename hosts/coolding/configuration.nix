@@ -5,15 +5,13 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [
-      # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./network.nix
-      ./secret.nix
-      ../../common
-      ../../modules
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ./network.nix
+    ./secret.nix
+    ../../modules
+  ];
 
   # import overlays
   nixpkgs.overlays = [ (import ../../overlays) ];
@@ -35,9 +33,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.kernel.sysctl = {
-    "vm.swappiness" = 1;
-  };
+  boot.kernel.sysctl = { "vm.swappiness" = 1; };
 
   # deal with apple keyboard
   boot.extraModprobeConfig = ''
@@ -54,6 +50,7 @@
   environment.systemPackages = with pkgs; [
     discord
     cointop
+    rnix-lsp
   ];
 
   # use gnupg agent for ssh

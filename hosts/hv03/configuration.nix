@@ -24,7 +24,7 @@ in
       ./nfs.nix
       ./secrets.nix
       ./network.nix
-      ../../common
+      ../../modules
     ];
 
   # Use the GRUB 2 boot loader.
