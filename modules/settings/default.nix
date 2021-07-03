@@ -4,6 +4,10 @@ let
   cfg = config.settings;
 in
 {
+  imports = [
+    ./audio.nix
+  ];
+
   options.settings = {
     host = mkOption {
       type = types.str;

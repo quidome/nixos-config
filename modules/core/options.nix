@@ -11,6 +11,5 @@ with lib;
 
     wpa.enable = mkEnableOption "Whether to use wpa_supplicant instead of network manager. Defaults to false";
     flatpak.enable = mkEnableOption "Enable flatpak";
-    pipewire.enable = mkEnableOption "Enable pipewire audio. Defaults to false (use pulseaudio)";
   };
 }

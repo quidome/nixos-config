@@ -25,7 +25,7 @@
   };
 
   settings = {
-    pipewire.enable = true;
+    audio.enable = true;
   };
 
   networking.hostName = "linux-10194"; # Define your hostname.

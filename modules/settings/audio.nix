@@ -17,4 +17,13 @@ in
       example = "pipewire";
     };
   };
+
+  config = mkMerge [
+    (mkIf (cfg.enable && cfg.daemon == "pipewire") {
+      settings.pipewire.enable = true;
+    })
+    (mkIf (cfg.enable && cfg.daemon == "pulseaudio") {
+      settings.pulseaudio.enable = true;
+    })
+  ];
 }
