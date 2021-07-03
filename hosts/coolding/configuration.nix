@@ -23,7 +23,7 @@
   };
 
   settings = {
-    pipewire.enable = true;
+    audio.enable = true;
     flatpak.enable = true;
   };
 
