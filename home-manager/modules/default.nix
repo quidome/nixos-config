@@ -2,11 +2,12 @@
 
 {
   imports = [
+    ./basics.nix
     ./gui
-    ./xorg
     ./programs
     ./services
     ./settings.nix
     ./user
+    ./xorg
   ];
 }
