@@ -74,13 +74,16 @@ in
       };
       "org/gnome/shell/extensions/screenshot" = {
         clipboard-action = "set-image-data";
+        enable-imgur = false;
         enable-indicator = true;
         enable-notification = true;
         filename-template = "{Y}{m}{d}{H}{M}{S}-{w}x{h}";
         imgur-enable-notification = true;
         save-location = "${config.home.homeDirectory}/Pictures/screenshots";
         save-screenshot = true;
-        shortcut-select-area = [ "Print" ];
+        shortcut-select-area = [ "Eject" ];
+        shortcut-select-desktop = [ "<Control>Eject" ];
+        shortcut-select-window = [ "<Shift>Eject" ];
       };
     };
   };
