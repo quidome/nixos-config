@@ -28,4 +28,6 @@ in
   settings = {
     gui.environment = "gnome";
   };
+
+  my.programs.zsh.enable = true;
 }
