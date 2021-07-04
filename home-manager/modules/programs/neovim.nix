@@ -11,7 +11,7 @@
     viAlias = true;
     vimAlias = true;
     vimdiffAlias = true;
-    extraConfig = builtins.readFile ./files/extraConfig.vim;
+    extraConfig = builtins.readFile ./neovim/extraConfig.vim;
 
     plugins = with pkgs.vimPlugins; [
       vim-nix

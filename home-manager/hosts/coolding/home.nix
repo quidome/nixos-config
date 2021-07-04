@@ -11,8 +11,6 @@ in
     ../../modules
     ../../elemental.nix
     ../../modules/basics.nix
-    ../../modules/vim
-    ../../program
   ];
 
   # home manager required settings
