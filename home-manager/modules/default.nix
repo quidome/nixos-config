@@ -6,5 +6,6 @@
     ./settings
     ./xorg
     ./services
+    ./user
   ];
 }

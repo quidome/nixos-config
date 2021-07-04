@@ -1,5 +1,0 @@
-{
-  imports = [
-    ./qmeijer/default.nix
-  ];
-}

@@ -13,7 +13,6 @@ in
     ../../modules/basics.nix
     ../../modules/vim
     ../../program
-    ../../user
   ];
 
   # home manager required settings
