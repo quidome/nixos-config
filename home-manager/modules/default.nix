@@ -3,9 +3,9 @@
 {
   imports = [
     ./gui
-    ./settings
     ./xorg
     ./services
+    ./settings.nix
     ./user
   ];
 }
