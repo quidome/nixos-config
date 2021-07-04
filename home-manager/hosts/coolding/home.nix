@@ -10,7 +10,6 @@ in
     ./secret.nix
     ../../modules
     ../../elemental.nix
-    ../../modules/basics.nix
   ];
 
   # home manager required settings
