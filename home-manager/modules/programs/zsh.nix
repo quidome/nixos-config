@@ -10,8 +10,17 @@ in
   };
 
   config = mkIf cfg.enable {
+
+    home.file.".zprompt".source = ./zsh/zprompt;
+    home.file.".zcolors".source = ./zsh/zcolors;
+
+    xdg.configFile."zsh/zprompt".source = ./zsh/zprompt;
+    xdg.configFile."zsh/zcolors".source = ./zsh/zcolors;
+
     programs.zsh = {
       enable = true;
+
+      dotDir = ".config/zsh";
 
       enableCompletion = true;
       enableAutosuggestions = true;
@@ -22,6 +31,19 @@ in
       };
 
       defaultKeymap = "emacs";
+
+      initExtra = ''
+        if [ -d $HOME/.env.d ]; then
+          for i in $HOME/.env.d/*.sh; do
+            if [ -r $i ]; then
+              . $i
+            fi
+          done
+          unset i
+        fi
+
+        source $HOME/.config/zsh/zprompt
+      '';
     };
   };
 }
