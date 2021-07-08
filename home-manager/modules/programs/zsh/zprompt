@@ -3,7 +3,7 @@ setopt promptsubst
 unsetopt transient_rprompt # leave the pwd
 
 # get the colors
-source ~/.config/zsh/zcolors
+source ~/.zcolors
 
 # Git status
 GIT_PROMPT_SYMBOL="%{$fg[blue]%}±"
