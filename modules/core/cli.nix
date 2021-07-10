@@ -12,6 +12,7 @@
     vim
 
     # network
+    ncat
     curl
     httpie
     ldns
@@ -28,6 +29,7 @@
     cointop
     docker-compose
     exa
+    ispell
     fzf
     gopass
     ipcalc
