@@ -50,6 +50,14 @@ with lib;
 
             # theming
             lxappearance
+            adapta-backgrounds
+            adapta-gtk-theme
+            arc-icon-theme
+            arc-theme
+            gruvbox-dark-gtk
+            gruvbox-dark-icons-gtk
+            numix-gtk-theme
+            numix-icon-theme
           ];
         };
       };
