@@ -28,7 +28,7 @@ in
   };
 
   settings = {
-    gui.environment = "gnome";
+    gui.environment = "i3";
   };
 
   my = {
