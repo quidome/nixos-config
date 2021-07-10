@@ -31,6 +31,11 @@ in
     gui.environment = "gnome";
   };
 
+  my = {
+    programs.alacritty.enable = true;
+    programs.zsh.enable = true;
+  };
+
   programs.taskwarrior.enable = true;
 
   # TODO: fix this security issue
