@@ -1,10 +1,10 @@
 { config, lib, pkgs, ... }:
 let
-  cfg = config.elemental;
+  cfg = config.my;
 in
 {
 
-  options.elemental.host = lib.mkOption {
+  options.my.host = lib.mkOption {
     type = lib.types.str;
     default = "";
     description = ''
@@ -13,7 +13,7 @@ in
     example = "boron";
   };
 
-  options.elemental.role = lib.mkOption {
+  options.my.role = lib.mkOption {
     type = lib.types.str;
     default = "";
     description = ''
@@ -22,7 +22,7 @@ in
     example = "workstation";
   };
 
-  options.elemental.user = lib.mkOption {
+  options.my.user = lib.mkOption {
     type = lib.types.str;
     default = "";
     description = ''
