@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 with lib;
 {
-  options.settings.gui.environment = mkOption {
+  options.my.gui.environment = mkOption {
     type = with types; enum [ "none" "gnome" "i3" "kde" ];
     default = "none";
     description = ''
