@@ -1,8 +1,6 @@
 { config, pkgs, lib, ... }:
-
-with lib;
 {
-  config = mkIf (config.custom.desktop != "none") {
+  config = lib.mkIf (config.my.desktop != "none") {
     services.xserver = {
       enable = true;
       layout = "us";

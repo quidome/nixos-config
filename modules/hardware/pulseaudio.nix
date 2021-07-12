@@ -1,10 +1,10 @@
 { config, pkgs, lib, ... }:
 with lib;
 let
-  cfg = config.settings.pulseaudio;
+  cfg = config.my.hardware.pulseaudio;
 in
 {
-  options.settings.pulseaudio = {
+  options.my.hardware.pulseaudio = {
     enable = mkEnableOption "Enable pulseaudio configuration";
   };
 

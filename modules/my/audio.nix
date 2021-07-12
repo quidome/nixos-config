@@ -1,10 +1,10 @@
 { config, lib, pkgs, ... }:
 with lib;
 let
-  cfg = config.settings.audio;
+  cfg = config.my.audio;
 in
 {
-  options.settings.audio = {
+  options.my.audio = {
     # configure audio
     enable = mkEnableOption "Enable audio";
 
@@ -20,10 +20,10 @@ in
 
   config = mkMerge [
     (mkIf (cfg.enable && cfg.daemon == "pipewire") {
-      settings.pipewire.enable = true;
+      my.services.pipewire.enable = true;
     })
     (mkIf (cfg.enable && cfg.daemon == "pulseaudio") {
-      settings.pulseaudio.enable = true;
+      my.hardware.pulseaudio.enable = true;
     })
   ];
 }

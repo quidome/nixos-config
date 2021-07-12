@@ -1,7 +1,6 @@
 { config, pkgs, lib, ... }:
-
-with lib; {
-  config = mkIf (config.custom.desktop == "gnome") {
+{
+  config = lib.mkIf (config.my.desktop == "gnome") {
 
     # use gdm and gnome-shell
     services.xserver = {
