@@ -17,11 +17,13 @@
   # import overlays
   nixpkgs.overlays = [ (import ../../overlays) ];
 
+  my = {
+    services.flatpak.enable = false;
+  };
+
   custom = {
     desktop = "i3";
     wpa.enable = true;
-
-    flatpak.enable = false;
   };
 
   settings = {
