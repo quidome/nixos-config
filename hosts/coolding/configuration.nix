@@ -18,11 +18,11 @@
 
   my = {
     services.flatpak.enable = true;
+    wpa.enable = false;
   };
 
   custom = {
     desktop = "gnome";
-    wpa.enable = false;
   };
 
   settings = {

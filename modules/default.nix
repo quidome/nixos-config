@@ -1,5 +1,6 @@
 {
   imports = [
+    ./my.nix
     ./hardware
     ./services
     ./core
