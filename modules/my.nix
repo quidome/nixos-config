@@ -1,6 +1,10 @@
 { config, lib, ... }:
 
 {
+  imports = [
+    ./my
+  ];
+
   options.my = {
     desktop = lib.mkOption {
       type = lib.types.str;

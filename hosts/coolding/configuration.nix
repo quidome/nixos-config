@@ -17,16 +17,13 @@
   nixpkgs.overlays = [ (import ../../overlays) ];
 
   my = {
+    audio.enable = true;
     services.flatpak.enable = true;
     wpa.enable = false;
   };
 
   custom = {
     desktop = "gnome";
-  };
-
-  settings = {
-    audio.enable = true;
   };
 
   networking.hostName = "coolding"; # Define your hostname.

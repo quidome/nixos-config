@@ -18,16 +18,13 @@
   nixpkgs.overlays = [ (import ../../overlays) ];
 
   my = {
+    audio.enable = true;
     wpa.enable = true;
     services.flatpak.enable = false;
   };
 
   custom = {
     desktop = "i3";
-  };
-
-  settings = {
-    audio.enable = true;
   };
 
   networking.hostName = "linux-10194"; # Define your hostname.

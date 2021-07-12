@@ -1,10 +1,10 @@
 { lib, pkgs, config, ... }:
 with lib;
 let
-  cfg = config.settings.pipewire;
+  cfg = config.my.services.pipewire;
 in
 {
-  options.settings.pipewire = {
+  options.my.services.pipewire = {
     enable = mkEnableOption "Enable pipewire configuration";
   };
 

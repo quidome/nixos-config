@@ -1,6 +1,6 @@
 {
   imports = [
-    ./pipewire
     ./flatpak.nix
+    ./pipewire.nix
   ];
 }
