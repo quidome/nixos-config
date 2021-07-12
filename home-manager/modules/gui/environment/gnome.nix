@@ -6,7 +6,7 @@ in
 {
   config = mkIf (cfg.environment == "gnome") {
     # Configuration shared between all xorg enabled configs
-    settings.xorg.enable = true;
+    my.xorg.enable = true;
 
     # gnome settings by dconf
     dconf.settings = {

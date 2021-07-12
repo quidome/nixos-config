@@ -6,8 +6,8 @@ in
 {
   config = mkIf (cfg.environment == "i3") {
     # Configuration shared between all xorg enabled configs
-    settings.xorg.enable = true;
-    settings.services.flameshot.enable = true;
+    my.xorg.enable = true;
+    my.services.flameshot.enable = true;
 
 
     # setup programs related to my i3 setup

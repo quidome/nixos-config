@@ -1,10 +1,10 @@
 { lib, pkgs, config, ... }:
 with lib;
 let
-  cfg = config.settings.services.flameshot;
+  cfg = config.my.services.flameshot;
 in
 {
-  options.settings.services.flameshot = {
+  options.my.services.flameshot = {
     enable = mkEnableOption "Enable flameshot";
   };
 
