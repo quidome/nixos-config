@@ -7,7 +7,6 @@
     ./gui
     ./programs
     ./services
-    ./settings.nix
     ./user
     ./xorg
   ];
