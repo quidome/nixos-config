@@ -1,12 +1,10 @@
 { lib, pkgs, config, ... }:
 with lib;
 let
-  cfg = config.settings.xorg;
+  cfg = config.my.xorg;
 in
 {
-  options.settings.xorg = {
-    enable = mkEnableOption "Enable xorg configuration";
-  };
+  options.my.xorg.enable = mkEnableOption "Enable xorg configuration";
 
   config = mkIf cfg.enable {
     # Configuration shared between all xorg enabled configs
