@@ -29,5 +29,7 @@ in
     gui.environment = "gnome";
   };
 
-  my.programs.zsh.enable = true;
+  my = {
+    programs.zsh.enable = true;
+  };
 }
