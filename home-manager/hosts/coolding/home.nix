@@ -16,14 +16,12 @@ in
   home.homeDirectory = userHome;
   home.stateVersion = "21.05";
 
-  settings = {
-    gui.environment = "gnome";
-  };
-
   my = {
     user = user;
     role = "workstation";
     host = hostname;
+
+    gui.environment = "gnome";
 
     programs.tmux.enable = true;
     programs.zsh.enable = true;

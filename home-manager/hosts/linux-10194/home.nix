@@ -17,13 +17,14 @@ in
   home.stateVersion = "21.05";
 
   settings = {
-    gui.environment = "i3";
   };
 
   my = {
     user = user;
     role = "workstation";
     host = hostname;
+
+    gui.environment = "i3";
 
     # feature toggles
     programs.tmux.enable = true;
