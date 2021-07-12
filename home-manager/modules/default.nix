@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./my.nix
     ./basics.nix
     ./gui
     ./programs

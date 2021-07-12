@@ -1,10 +1,10 @@
 { lib, pkgs, config, ... }:
 with lib;
 let
-  cfg = config.elemental.program.terminal.tmux;
+  cfg = config.my.programs.tmux;
 in
 {
-  options.elemental.program.terminal.tmux = {
+  options.my.programs.tmux = {
     enable = mkEnableOption "Enable to tmux terminal multiplexer";
   };
 
