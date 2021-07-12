@@ -1,7 +1,7 @@
 { lib, pkgs, config, ... }:
 with lib;
 let
-  cfg = config.settings.gui;
+  cfg = config.my.gui;
 in
 {
   config = mkIf (cfg.environment == "i3") {

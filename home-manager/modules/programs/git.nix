@@ -1,10 +1,10 @@
 { config, lib, pkgs, ... }:
 with lib;
 let
-  cfg = config.elemental.program.dev.git;
+  cfg = config.my.programs.git;
 in
 {
-  options.elemental.program.dev.git = {
+  options.my.programs.git = {
     enable = lib.mkEnableOption "Enable git";
 
     userEmail = lib.mkOption {

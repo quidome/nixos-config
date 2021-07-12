@@ -1,12 +1,11 @@
 { config, lib, pkgs, ... }:
-with lib;
 let
-  cfg = config.settings;
+  cfg = config.my;
 in
 {
 
-  options.settings.host = mkOption {
-    type = types.str;
+  options.my.host = lib.mkOption {
+    type = lib.types.str;
     default = "";
     description = ''
       The hostname of the device.
@@ -14,8 +13,8 @@ in
     example = "boron";
   };
 
-  options.settings.role = mkOption {
-    type = with types; enum [ "server" "workstation" "homestation" ];
+  options.my.role = lib.mkOption {
+    type = lib.types.str;
     default = "";
     description = ''
       The device role, this determines the window manager and GUI tools to be installed.
@@ -23,8 +22,8 @@ in
     example = "workstation";
   };
 
-  options.settings.user = mkOption {
-    type = types.str;
+  options.my.user = lib.mkOption {
+    type = lib.types.str;
     default = "";
     description = ''
       The username of the primary user.
