@@ -1,7 +1,6 @@
 { config, pkgs, lib, ... }:
-with lib;
 {
-  config = mkIf (config.custom.desktop == "sway") {
+  config = lib.mkIf (config.my.desktop == "sway") {
     services.xserver.displayManager.startx.enable = true;
 
     programs.sway = {

@@ -18,12 +18,10 @@
 
   my = {
     audio.enable = true;
+    desktop = "gnome";
+
     services.flatpak.enable = true;
     wpa.enable = false;
-  };
-
-  custom = {
-    desktop = "gnome";
   };
 
   networking.hostName = "coolding"; # Define your hostname.

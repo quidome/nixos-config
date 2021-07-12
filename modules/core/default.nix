@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./options.nix
     ./base.nix
     ./cli.nix
   ];

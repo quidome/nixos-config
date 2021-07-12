@@ -1,10 +1,9 @@
 {
   imports = [
-    ./my.nix
+    ./my
     ./hardware
     ./services
     ./core
     ./desktop
-    ./settings
   ];
 }

@@ -16,8 +16,7 @@ in
   home.homeDirectory = userHome;
   home.stateVersion = "21.05";
 
-  settings = {
-  };
+  settings = { };
 
   my = {
     user = user;

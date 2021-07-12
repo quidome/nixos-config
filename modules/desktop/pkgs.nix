@@ -1,7 +1,6 @@
 { config, pkgs, lib, ... }:
-
 {
-  config = lib.mkIf (config.custom.desktop != "none") {
+  config = lib.mkIf (config.my.desktop != "none") {
     environment.systemPackages = with pkgs; [
       # base
       xclip
