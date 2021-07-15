@@ -26,6 +26,9 @@ in
     # feature toggles
     programs.tmux.enable = true;
     programs.zsh.enable = true;
+
+    services.gpg-agent.enable = true;
+    services.gpg-agent.enableSshSupport = true;
   };
 
   programs.taskwarrior.enable = true;
@@ -56,16 +59,20 @@ in
 
     # python setup
     black
-    (python3.withPackages (ps:
-      with ps; [
-        flake8
-        pip
-        requests
-        ruamel_yaml
-        termcolor
-        virtualenvwrapper
-        yamllint
-      ]))
+    (
+      python3.withPackages (
+        ps:
+          with ps; [
+            flake8
+            pip
+            requests
+            ruamel_yaml
+            termcolor
+            virtualenvwrapper
+            yamllint
+          ]
+      )
+    )
 
     # ruby setup
     ruby

@@ -25,5 +25,8 @@ in
 
     programs.tmux.enable = true;
     programs.zsh.enable = true;
+
+    services.gpg-agent.enable = true;
+    services.gpg-agent.enableSshSupport = true;
   };
 }

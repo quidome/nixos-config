@@ -3,5 +3,6 @@
 {
   imports = [
     ./flameshot.nix
+    ./gpg-agent.nix
   ];
 }
