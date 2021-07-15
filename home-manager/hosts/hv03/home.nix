@@ -18,7 +18,7 @@ in
 
   my = {
     user = user;
-    role = "workstation";
+    role = "server";
     host = hostname;
 
     programs.tmux.enable = true;
