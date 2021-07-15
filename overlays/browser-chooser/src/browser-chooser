@@ -1,18 +1,24 @@
-#!/usr/bin/env bash
+#!${pkgs.bash}/bin/bash
 
-# disable this for now, restore this when playing with wayland
-#graphical_env=$(loginctl show-session $(awk '/tty/ {print $1}' <(loginctl)) -p Type | awk -F= '{print $2}')
+graphical_env=$(loginctl show-session $(awk '/tty/ {print $1}' <(loginctl)) -p Type | awk -F= '{print $2}')
 
-#if [ "$graphical_env" == "wayland" ] ; then
-#  menu_provider='bemenu -bl7'
-#else
-  menu_provider='rofi -dmenu'
-#fi
+if [ "$graphical_env" == "wayland" ] ; then
+    menu_provider='bemenu -bl7'
+else
+    menu_provider='rofi -dmenu'
+fi
 
+menu_items=(
+    "firefox -P home"
+    "firefox -P work"
+    "chromium"
+    "firewarden chromium"
+    "| xclip -selection c"
+    "| wl-copy"
+    "temp_firefox"
+)
 
-#\"| xclip -selection c\"\n"| wl-copy"\ntemp_firefox
-
-menu=$(echo -e "firefox -P home\nfirefox -P work\nchromium\nfirewarden chromium\n| xclip -selection c\n| wl-copy\ntemp_firefox" | $menu_provider -p "browser ")
+menu=$(printf '%s\n' "${menu_items[@]}" | $menu_provider -p browser)
 
 if [[ $menu == \|* ]]; then
     eval echo \"$@\" $menu > /dev/null 2>&1 &

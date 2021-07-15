@@ -1,5 +1,5 @@
 {
   imports = [
-    ./pulseaudio.nix
+    ./qmeijer.nix
   ];
 }

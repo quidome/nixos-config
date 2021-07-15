@@ -2,9 +2,12 @@
 
 {
   imports = [
+    ./my.nix
+    ./basics.nix
     ./gui
-    ./settings
-    ./xorg
+    ./programs
     ./services
+    ./user
+    ./xorg
   ];
 }

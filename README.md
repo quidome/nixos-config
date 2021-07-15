@@ -31,7 +31,7 @@ A few snippets from https://github.com/nix-community/home-manager  on how to ins
 
 ```
 ### setup home manager channel under root (why keep two channel lists)
-$ sudo nix-channel --add https://github.com/nix-community/home-manager/archive/release-20.09.tar.gz home-manager
+$ sudo nix-channel --add https://github.com/nix-community/home-manager/archive/release-21.05.tar.gz home-manager
 $ sudo nix-channel --update
 
 ### install home manager

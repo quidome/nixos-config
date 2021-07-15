@@ -17,15 +17,12 @@
   # import overlays
   nixpkgs.overlays = [ (import ../../overlays) ];
 
-  custom = {
-    desktop = "gnome";
-    wpa.enable = false;
+  my = {
+    audio.enable = true;
+    desktop = "i3";
 
-    flatpak.enable = false;
-  };
-
-  settings = {
-    pipewire.enable = true;
+    wpa.enable = true;
+    services.flatpak.enable = false;
   };
 
   networking.hostName = "linux-10194"; # Define your hostname.

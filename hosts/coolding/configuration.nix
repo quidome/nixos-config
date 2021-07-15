@@ -16,15 +16,12 @@
   # import overlays
   nixpkgs.overlays = [ (import ../../overlays) ];
 
-  custom = {
+  my = {
+    audio.enable = true;
     desktop = "gnome";
+
+    services.flatpak.enable = true;
     wpa.enable = false;
-
-  };
-
-  settings = {
-    pipewire.enable = true;
-    flatpak.enable = true;
   };
 
   networking.hostName = "coolding"; # Define your hostname.
@@ -38,7 +35,6 @@
   # deal with apple keyboard
   boot.extraModprobeConfig = ''
     options hid_apple swap_opt_cmd=1
-    #options hid_apple swap_fn_leftctrl=1
   '';
 
   hardware = {

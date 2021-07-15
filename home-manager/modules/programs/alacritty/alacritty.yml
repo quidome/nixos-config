@@ -1,0 +1,51 @@
+# Configuration for Alacritty, the GPU enhanced terminal emulator.
+# Font configuration
+font:
+  size: 8
+
+  normal:
+    family: Source Code Pro
+    style: Regular
+  bold:
+    family: Source Code Pro
+    style: Bold
+  italic:
+    family: Source Code Pro
+    style: Italic
+  bold_italic:
+    family: Source Code Pro
+    style: Bold Italic
+
+# https://github.com/alacritty/alacritty/wiki/Color-schemes#monokai-pro
+# Colors (Monokai Pro)
+colors:
+  # Default colors
+  primary:
+    background: '0x2D2A2E'
+    foreground: '0xFCFCFA'
+
+  # Normal colors
+  normal:
+    black:   '0x403E41'
+    red:     '0xFF6188'
+    green:   '0xA9DC76'
+    yellow:  '0xFFD866'
+    blue:    '0xFC9867'
+    magenta: '0xAB9DF2'
+    cyan:    '0x78DCE8'
+    white:   '0xFCFCFA'
+
+  # Bright colors
+  bright:
+    black:   '0x727072'
+    red:     '0xFF6188'
+    green:   '0xA9DC76'
+    yellow:  '0xFFD866'
+    blue:    '0xFC9867'
+    magenta: '0xAB9DF2'
+    cyan:    '0x78DCE8'
+    white:   '0xFCFCFA'
+
+# Window opacity as a floating point number from `0.0` to `1.0`.
+# The value `0.0` is completely transparent and `1.0` is opaque.
+background_opacity: 0.9

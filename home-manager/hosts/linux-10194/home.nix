@@ -9,11 +9,6 @@ in
   imports = [
     ./secret.nix
     ../../modules
-    ../../elemental.nix
-    ../../modules/basics.nix
-    ../../modules/vim
-    ../../program
-    ../../user
   ];
 
   # home manager required settings
@@ -21,18 +16,16 @@ in
   home.homeDirectory = userHome;
   home.stateVersion = "21.05";
 
-  # elemental setup
-  elemental = {
+  my = {
     user = user;
     role = "workstation";
     host = hostname;
 
-    # feature toggles
-    program.terminal.tmux.enable = true;
-  };
+    gui.environment = "i3";
 
-  settings = {
-    gui.environment = "gnome";
+    # feature toggles
+    programs.tmux.enable = true;
+    programs.zsh.enable = true;
   };
 
   programs.taskwarrior.enable = true;

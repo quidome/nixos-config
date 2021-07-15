@@ -1,9 +1,6 @@
 { config, pkgs, lib, ... }:
-
-
-with lib;
 {
-  config = mkIf (config.custom.desktop == "kde") {
+  config = lib.mkIf (config.my.desktop == "kde") {
 
     # services required for plasma
     services = {
