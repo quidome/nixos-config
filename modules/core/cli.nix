@@ -12,6 +12,7 @@
     vim
 
     # network
+    ncat
     curl
     httpie
     ldns
